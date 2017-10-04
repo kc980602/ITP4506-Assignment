@@ -7,11 +7,6 @@ body {
   background-color: #AFC94A!important;
 }
 
-.navbar {
-  margin-bottom: 0;
-  height: 56px;
-}
-
 .navbar-right {
   float: right!important;
   margin-right: -15px;
@@ -108,4 +103,16 @@ footer {
 
 footer p {
   margin-bottom: .25rem;
+}
+
+.nav-tabs .nav-link, .nav-tabs {
+  border: 1px solid #AFC94A;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: transparent;
+}
+
+a.nav-link {
+  color: #fff;
 }
