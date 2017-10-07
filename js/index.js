@@ -26,6 +26,9 @@ $('body').on('click', '.modal.show', function(e) {
   })
 })
 
+$(document).ready(function() {
+  $('.ht_searchBox,.ht_caption').addClass('show')
+})
 
 $('.ht_searchBox_tab > .tablinks').click(function(e) {
   $(this).siblings().removeClass('active')
