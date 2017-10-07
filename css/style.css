@@ -200,7 +200,7 @@ input.ht_input {
   font-size: 14px;
 }
 
-.btn-ht {
+.btn-search {
   background: #AFC94A;
   color: #fff;
   letter-spacing: 0;
@@ -209,7 +209,12 @@ input.ht_input {
   font-size: 18px;
 }
 
-.btn-ht:active {
+.btn-ht {
+  color: #fff;
+  background: #AFC94A;
+}
+
+.btn-ht:active, .btn-search:active {
   background-color: #84992e;
   background-image: none;
   border-color: #5b691f;
@@ -218,5 +223,26 @@ input.ht_input {
 .btn-ht:hover {
   color: #fff;
   background-color: #84992e;
+}
+
+.btn-search:hover {
+  color: #fff;
+  background-color: #84992e;
   border-color: #5b691f;
+}
+
+.heading-section:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  height: 2px;
+  background: #AFC94A;
+}
+
+.heading-section {
+  padding-bottom: 1em;
+  margin-bottom: 5em;
 }
