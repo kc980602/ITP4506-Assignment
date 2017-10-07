@@ -3,6 +3,11 @@ body {
   /* Can be removed; just added for demo purposes */
 }
 
+::selection {
+  color: #fcfcfc;
+  background: #AFC94A;
+}
+
 .bg-dark {
   background-color: #AFC94A!important;
 }
@@ -14,6 +19,8 @@ body {
 
 .navbar-dark .navbar-nav .nav-link {
   color: rgb(255, 255, 255);
+  padding: 0.75em 1em !important;
+  font-weight: bold;
 }
 
 .shadow {
@@ -28,7 +35,7 @@ body {
   background-image: url(../img/tokyo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0% 17%;
+  background-position: 0% 60%;
   background-color: #fff;
   height: auto;
   border-radius: 0;
@@ -51,7 +58,6 @@ body {
 }
 
 .ht_searchBox {
-  height: 450px;
   background-color: rgba(0, 0, 0, .7);
   border-radius: 2px;
 }
@@ -68,7 +74,7 @@ body {
   align-items: center;
   -ms-flex-pack: end;
   justify-content: space-evenly;
-  border-bottom: 1px solid rgba(128, 128, 128, .25)
+  border-bottom: 1px solid rgba(128, 128, 128, .25);
 }
 
 .ht_searchBox_tab button {
@@ -83,13 +89,17 @@ body {
 }
 
 .ht_searchBox_tab button:hover {
-  color: #fbc308;
+  color: #AFC94A;
   background-color: rgba(0, 0, 0, .8);
 }
 
 .ht_searchBox_tab button.active {
-  color: #fbc308;
-  border-bottom: 1px solid #fbc308;
+  color: #AFC94A;
+  border-bottom: 1px solid #AFC94A;
+}
+
+.ht_searchBox_content {
+  padding: 30px;
 }
 
 .album {
@@ -172,4 +182,41 @@ a.nav-link {
 
 #loginModal .modal-footer>:not(:first-child) {
   border-bottom-right-radius: .25rem;
+}
+
+input.ht_input {
+  width: 100%;
+  background-color: rgba(29, 29, 29, .8);
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px !important;
+  outline: none;
+  color: #AFC94A;
+}
+
+.ht_searchBox_content label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.btn-ht {
+  background: #AFC94A;
+  color: #fff;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn-ht:active {
+  background-color: #84992e;
+  background-image: none;
+  border-color: #5b691f;
+}
+
+.btn-ht:hover {
+  color: #fff;
+  background-color: #84992e;
+  border-color: #5b691f;
 }
