@@ -21,6 +21,7 @@ body {
 }
 
 .ht_banner {
+  position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 0;
@@ -31,6 +32,22 @@ body {
   background-color: #fff;
   height: auto;
   border-radius: 0;
+}
+
+.ht_banner:after {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.ht_banner .container {
+  position: relative;
+  z-index: 1;
 }
 
 .ht_searchBox {
@@ -45,31 +62,34 @@ body {
 }
 
 .ht_searchBox_tab {
-  overflow: hidden;
-  background-color: transparent;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgba(128, 128, 128, .25)
 }
 
 .ht_searchBox_tab button {
-  width: 100px;
-  height: 60px;
+  width: 100%;
+  height: 40px;
   background-color: inherit;
-  float: left;
-  border: 2px solid #ccc;
+  border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
   transition: 0.3s;
-  font-size: 20px;
   color: #FFF;
-  margin: 10px 0 0 10px;
 }
 
 .ht_searchBox_tab button:hover {
+  color: #fbc308;
   background-color: rgba(0, 0, 0, .8);
 }
 
 .ht_searchBox_tab button.active {
-  background-color: #ccc;
+  color: #fbc308;
+  border-bottom: 1px solid #fbc308;
 }
 
 .album {
@@ -115,4 +135,41 @@ footer p {
 
 a.nav-link {
   color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: .8rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: rgba(128, 128, 128, .4);
+  border: 2px solid transparent;
+  border-radius: .8rem;
+  -webkit-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .05), inset 1px 1px 0 rgba(0, 0, 0, .05);
+  box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .05), inset 1px 1px 0 rgba(0, 0, 0, .05);
+}
+
+#loginModal .modal-header {
+  justify-content: center;
+}
+
+#loginModal .modal-footer {
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+#loginModal .modal-footer>button {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+}
+
+#loginModal .modal-footer>:not(:last-child) {
+  border-bottom-left-radius: .25rem;
+}
+
+#loginModal .modal-footer>:not(:first-child) {
+  border-bottom-right-radius: .25rem;
 }
