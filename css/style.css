@@ -12,6 +12,10 @@ body {
   background-color: #AFC94A!important;
 }
 
+.navbar {
+  z-index: 2;
+}
+
 .navbar-right {
   float: right!important;
   margin-right: -15px;
@@ -54,7 +58,7 @@ body {
   color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 100% 45%;
+  background-position: center 45%;
   opacity: 0;
   z-index: 0;
   animation: imageAnimation 36s linear infinite 0s;
@@ -130,6 +134,7 @@ body {
 }
 
 .no-cssanimations .ht_slideshow li span {
+  background-image: url(../img/tokyo.jpg);
   opacity: 1;
 }
 
@@ -138,10 +143,9 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 0;
-  /*background-image: url(../img/tokyo.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0% 60%;
+  background-position: center 60%;
   background-color: transparent;
   height: auto;
   border-radius: 0;
@@ -164,7 +168,7 @@ body {
 }
 
 .ht_searchBox {
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 
@@ -294,9 +298,20 @@ a.nav-link {
 
 input.ht_input {
   width: 100%;
-  background-color: rgba(29, 29, 29, .8);
   border: none;
-  font-weight: bold;
+  border-radius: 2px;
+  font-weight: regular;
+  font-size: 14px;
+  padding: 5px 10px !important;
+  outline: none;
+  color: #AFC94A;
+}
+
+select.ht_input {
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  font-weight: regular;
   font-size: 14px;
   padding: 5px 10px !important;
   outline: none;

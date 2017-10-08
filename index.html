@@ -53,7 +53,6 @@
       </div>
     </div>
   </div>
-
   <ul class="ht_slideshow">
     <li><span></span></li>
     <li><span></span></li>
@@ -73,38 +72,70 @@
             </div>
             <div class="ht_searchBox_content" id="hotels">
               <div class="row">
-                <div class="col-6 mb-3">
-                  <div class="input-field">
-                    <label for="from">City:</label>
-                    <input type="text" class="ht_input" placeholder="City" />
-                  </div>
-                </div>
-                <div class="col-6 mb-3">
-                  <label for="dest">Destination:</label>
-                  <input type="text" class="ht_input" placeholder="Destination" />
-                </div>
-                <div class="col-6 mb-3">
-                  <div class="input-field">
-                    <label for="depart">Departs:</label>
-                    <input type="text" class="ht_input" placeholder="Departs" />
-                  </div>
-                </div>
-                <div class="col-6 mb-3">
-                  <label for="return">Return:</label>
-                  <input type="text" class="ht_input" placeholder="Return" />
-                </div>
                 <div class="col-12 mb-3">
+                  <label for="dest">Going to:</label>
+                  <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination"/>
+                  <datalist id="destination">
+                    <option value="Tokyo, Japan"></option>
+                    <option value="Osaka, Japan"></option>
+                    <option value="Nagoya, Japan"></option>
+                    <option value="Incheon, South Korea"></option>
+                    <option value="Seoul, South Korea"></option>
+                    <option value="Busan, South Korea"></option>
+                    <option value="Taipei, Taiwan"></option>
+                    <option value="Kaohsiung, Taiwan"></option>
+                    <option value="Kenting, Taiwan"></option>
+                  </datalist>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="input-field">
+                    <label for="depart">Check-in:</label>
+                    <input id="h_in" type="date" class="ht_input" placeholder="checkIn" />
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="input-field">
+                    <label for="depart">Check-out:</label>
+                    <input id="h_out" type="date" class="ht_input" placeholder="checkOut" />
+                  </div>
+                </div>
+                <div class="col-4 mb-3">
                   <label for="rooms">Rooms:</label>
-                  <input type="text" class="ht_input" placeholder="Rooms" />
+                  <select  id="h_room" class="custom-select ht_input" name="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8+">8+</option>
+                  </select>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <label for="adult">Adult:</label>
-                  <input type="text" class="ht_input" placeholder="Adult" />
+                  <select  id="h_adult" class="custom-select ht_input" name="">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <div class="input-field">
                     <label for="children">Children:</label>
-                    <input type="text" class="ht_input" placeholder="Children" />
+                    <select  id="h_children" class="custom-select ht_input" name="">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
                   </div>
                 </div>
                 <div class="col-12 mb-3">
@@ -114,38 +145,55 @@
             </div>
             <div class="ht_searchBox_content" id="flights">
               <div class="row">
-                <div class="col-6 mb-3">
-                  <div class="input-field">
-                    <label for="from">City:</label>
-                    <input type="text" class="ht_input" placeholder="City" />
-                  </div>
-                </div>
-                <div class="col-6 mb-3">
-                  <label for="dest">Destination:</label>
-                  <input type="text" class="ht_input" placeholder="Destination" />
-                </div>
-                <div class="col-6 mb-3">
-                  <div class="input-field">
-                    <label for="depart">Departs:</label>
-                    <input type="text" class="ht_input" placeholder="Departs" />
-                  </div>
-                </div>
-                <div class="col-6 mb-3">
-                  <label for="return">Return:</label>
-                  <input type="text" class="ht_input" placeholder="Return" />
+                <div class="col-12 mb-3">
+                  <label for="dest">Flying from</label>
+                  <input id="f_from" type="text" class="ht_input" placeholder="Destination" list="destination"/>
+                  <datalist id="destination">
+                    <option value="Tokyo, Japan"></option>
+                    <option value="Osaka, Japan"></option>
+                    <option value="Nagoya, Japan"></option>
+                    <option value="Incheon, South Korea"></option>
+                    <option value="Seoul, South Korea"></option>
+                    <option value="Busan, South Korea"></option>
+                    <option value="Taipei, Taiwan"></option>
+                    <option value="Kaohsiung, Taiwan"></option>
+                    <option value="Kenting, Taiwan"></option>
+                  </datalist>
                 </div>
                 <div class="col-12 mb-3">
-                  <label for="rooms">Rooms:</label>
-                  <input type="text" class="ht_input" placeholder="Rooms" />
+                  <label for="dest">Flying to</label>
+                  <input id="f_to" type="text" class="ht_input" placeholder="Destination" list="destination"/>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-12 mb-3">
+                  <div class="input-field">
+                    <label for="depart">Departing:</label>
+                    <input id="h_in" type="date" class="ht_input" placeholder="checkIn" />
+                  </div>
+                </div>
+                <div class="col-4 mb-3">
                   <label for="adult">Adult:</label>
-                  <input type="text" class="ht_input" placeholder="Adult" />
+                  <select  id="h_adult" class="custom-select ht_input" name="">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-4 mb-3">
                   <div class="input-field">
                     <label for="children">Children:</label>
-                    <input type="text" class="ht_input" placeholder="Children" />
+                    <select  id="h_children" class="custom-select ht_input" name="">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
                   </div>
                 </div>
                 <div class="col-12 mb-3">
@@ -230,8 +278,8 @@
       <p class="float-right">
         <a href="#">Back to top</a>
       </p>
-      <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-      <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      <p>© 2017, Happy Travel Ltd.</p>
+      <p>All rights reserved. Hong Kong Travel License (No. 1234567)</p>
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
