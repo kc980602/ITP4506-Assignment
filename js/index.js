@@ -7,7 +7,7 @@ $('.modal-trigger').click(async function(e) {
       alignItems: 'center',
       justifyContent: 'center',
       paddingTop: 0
-    }).promise();
+    }).promise()
     $(modal).addClass('show')
     $('body').append('<div class="modal-backdrop fade show"></div>')
   }
@@ -28,6 +28,7 @@ $('body').on('click', '.modal.show', function(e) {
 
 $(document).ready(function() {
   $('.ht_searchBox,.ht_caption').addClass('show')
+  $('.ht_searchBox_content#flights').hide()
 })
 
 $('.ht_searchBox_tab > .tablinks').click(function(e) {
@@ -35,18 +36,14 @@ $('.ht_searchBox_tab > .tablinks').click(function(e) {
   $(this).addClass('active')
 })
 
-$(document).ready(function(){
-  $(".ht_searchBox_content#flights").hide();
+$('.tablinks#hotels').click(function(){
+  $('.ht_searchBox_content#flights').hide();
+  $('.ht_searchBox_content#hotels').show();
 });
 
-$(".tablinks#hotels").click(function(){
-  $(".ht_searchBox_content#flights").hide();
-  $(".ht_searchBox_content#hotels").show();
-});
-
-$(".tablinks#flights").click(function(){
-  $(".ht_searchBox_content#hotels").hide();
-  $(".ht_searchBox_content#flights").show();
+$('.tablinks#flights').click(function(){
+  $('.ht_searchBox_content#hotels').hide();
+  $('.ht_searchBox_content#flights').show();
 });
 
 // $.fn.preload = function() {
