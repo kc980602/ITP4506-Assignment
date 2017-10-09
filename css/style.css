@@ -16,6 +16,11 @@ body {
   z-index: 2;
 }
 
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .navbar-right {
   float: right!important;
   margin-right: -15px;

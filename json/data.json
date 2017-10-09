@@ -1,0 +1,371 @@
+{
+  "hotels": [{
+      "id": 1,
+      "name": "The Gate Hotel Asakusa Kaminarimon by Hulic",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "2-16-11 Kaminarimon Taito-ku Tokyo Tokyo-to",
+      "website": "www.gate-hotel.jp",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "1.jpg",
+      "room": [{
+          "name": "Twin",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Premier Hotel-CABIN-Shinjuku",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Hilton Tokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "6-6-2, Nishi-Shinjuku, Shinjuku-ku, Tokyo, Tokyo-to, 160-0023, Japan",
+      "website": "http://www3.hilton.com/en/index.html",
+      "star": 3.5,
+      "rating": 4.6,
+      "price": 881,
+      "image": "2.jpg",
+      "room": [{
+          "name": "Twin Hilton",
+          "price": 2435,
+          "empty": 20
+        },
+        {
+          "name": "Twin Deluxe",
+          "price": 2783,
+          "empty": 14
+        }
+      ]
+    }
+  ]
+}
