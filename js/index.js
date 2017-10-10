@@ -33,12 +33,12 @@ $('body').on('click', '.modal.show', async function(e) {
 $(document).ready(function() {
   $('.ht_searchBox,.ht_caption').addClass('show')
   $('.ht_searchBox_content#flights').hide()
-})
+});
 
 $('.ht_searchBox_tab > .tablinks').click(function(e) {
   $(this).siblings().removeClass('active')
   $(this).addClass('active')
-})
+});
 
 $('.tablinks#hotels').click(function(){
   $('.ht_searchBox_content#flights').hide();
@@ -50,6 +50,14 @@ $('.tablinks#flights').click(function(){
   $('.ht_searchBox_content#flights').show();
 });
 
+$('.tablinks#flights').click(function(){
+  $('.ht_searchBox_content#hotels').hide();
+  $('.ht_searchBox_content#flights').show();
+});
+
+$('#hotelsSearch').click(function(){
+  window.location.href = './hotel.html';
+});
 // $.fn.preload = function() {
 //     this.each(function(){
 //         $('<img/>')[0].src = this;
