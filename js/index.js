@@ -9,18 +9,22 @@ $('.modal-trigger').click(async function(e) {
       paddingTop: 0
     }).promise()
     $(modal).addClass('show')
-    $('body').append('<div class="modal-backdrop fade show"></div>')
+    await $('body').append('<div class="modal-backdrop fade"></div>').css('overflow-y', 'hidden').promise()
+    $('.modal-backdrop').addClass('show')
   }
 })
 
-$('body').on('click', '.modal.show', function(e) {
+$('body').on('click', '.modal.show', async function(e) {
   if (e.target !== this)
     return;
-  let activeModal = $('.modal.show')
-  activeModal.removeClass('show')
-  $('.modal-backdrop').remove()
+  let activeModal = $('.modal.show, .modal-backdrop')
+  await activeModal.removeClass('show')
   activeModal.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-    if (!$(this).hasClass('show')) {
+    if ($(this).hasClass('modal-backdrop')) {
+      $('body').css('overflow-y', 'scroll')
+      $(this).remove()
+    } else if (!$(this).hasClass('show')) {
+      $('body').css('overflow-y', 'scroll')
       $(this).attr('style', '')
     }
   })
