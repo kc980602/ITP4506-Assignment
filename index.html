@@ -13,6 +13,7 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="./css/style.css" rel="stylesheet">
 
@@ -21,7 +22,7 @@
 <body>
   <div class="navbar navbar-dark bg-dark navbar-expand-lg bar-sg shadow flex-wrap sticky-top pb-0">
     <div class="container">
-      <a href="./index.html" class="navbar-brand"><img src="./img/logo.png" height="50"></a>
+      <a href="./index.html" class="navbar-brand"><img src="./img/icon.png" height="50"></a>
       <div class="navbar-collapse collapse flex-row-reverse">
         <ul class="navbar-nav">
           <!-- After Login -->
@@ -33,13 +34,13 @@
           </li>
           <!-- Public -->
           <li class="nav-item">
-            <a class="nav-link" href="./hotel.html">Hotel</a>
+            <a class="nav-link" href="#tours">Tours</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./flight.html">Flights</a>
+            <a class="nav-link" href="#hotel">Hotel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./tours.html">Contact</a>
+            <a class="nav-link" href="#flight">Flights</a>
           </li>
 
           <!-- Before Loing -->
@@ -292,13 +293,26 @@
     </div>
   </div>
 
-  <footer class="text-muted">
+  <footer class="page-footer">
     <div class="container">
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p>© 2017, Happy Travel Ltd.</p>
-      <p>All rights reserved. Hong Kong Travel License (No. 1234567)</p>
+      <div class="row">
+        <div class="col-12 col-lg-7">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col-12 col-lg-5">
+          <h5 class="white-text">Contact Us</h5>
+          <input id="h_destination" type="email" class="ht_input" placeholder="Email" />
+          <textarea class="ht_input mb-4" rows="4" placeholder="Your message"></textarea>
+          <a href="#!" class="btn btn-outline-ht float-right mb-4">Send</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2017, Happy Travel Ltd.
+        <a class="float-right" href="#!">Terms &amp; Condition</a>
+      </div>
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
