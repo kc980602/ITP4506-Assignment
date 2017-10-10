@@ -21,7 +21,7 @@
 <body>
   <div class="navbar navbar-dark bg-dark navbar-expand-lg bar-sg shadow flex-wrap sticky-top pb-0">
     <div class="container">
-      <a href="./index.html" class="navbar-brand"><img src="./img/logo.png" height="50"></a>
+      <a href="./index.html" class="navbar-brand"><img src="./img/happytravel.png" height="56"></a>
       <div class="navbar-collapse collapse flex-row-reverse">
         <ul class="navbar-nav">
           <!-- After Login -->
@@ -33,13 +33,13 @@
           </li>
           <!-- Public -->
           <li class="nav-item">
-            <a class="nav-link" href="./hotel.html">Hotel</a>
+            <a class="nav-link" href="#tours">Tours</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./flight.html">Flights</a>
+            <a class="nav-link" href="#hotel">Hotel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./tours.html">Contact</a>
+            <a class="nav-link" href="#flight">Flights</a>
           </li>
 
           <!-- Before Loing -->
@@ -51,6 +51,95 @@
     </div>
   </div>
 
+  <div class="ht_banner">
+    <div class="container">
+      <div class="row">
+        <div class="ht_searchBox_content" id="hotels">
+          <div class="row" style="border-bottom:1px">
+            <div class="col-md-6 col-sm-12 mb-3">
+              <label for="dest">Going to:</label>
+              <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination"/>
+              <datalist id="destination">
+                <option value="Tokyo, Japan"></option>
+                <option value="Osaka, Japan"></option>
+                <option value="Nagoya, Japan"></option>
+                <option value="Incheon, South Korea"></option>
+                <option value="Seoul, South Korea"></option>
+                <option value="Busan, South Korea"></option>
+                <option value="Taipei, Taiwan"></option>
+                <option value="Kaohsiung, Taiwan"></option>
+                <option value="Kenting, Taiwan"></option>
+              </datalist>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="input-field">
+                <label for="depart">Check-in:</label>
+                <input id="h_in" type="date" class="ht_input" placeholder="checkIn" />
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="input-field">
+                <label for="depart">Check-out:</label>
+                <input id="h_out" type="date" class="ht_input" placeholder="checkOut" />
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-3">
+              <label for="rooms">Rooms:</label>
+              <select  id="h_room" class="custom-select ht_input" name="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8+">8+</option>
+              </select>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-3">
+              <label for="adult">Adult:</label>
+              <select  id="h_adult" class="custom-select ht_input" name="">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
+            <div class="col-md-2 col-sm-4 mb-3">
+              <div class="input-field">
+                <label for="children">Children:</label>
+                <select  id="h_children" class="custom-select ht_input" name="">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2 mb-3">
+              <button id="hotelsSearch" type="button" class="btn btn-search btn-lg btn-block">Search</button>
+            </div>
+          </div>
+          <div class="row float-right">
+            <div class="col-12">
+              <button id="hotelsSearch" type="button" class="btn  btn-lg btn-block">
+                <i class="material-icons">keyboard_arrow_up
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="ht_content">
     <div class="container">
 
@@ -59,7 +148,7 @@
 sssssssssss
         </div>
         <div class="ht_searchContent col-9">
-ssss
+
         </div>
       </div>
 
