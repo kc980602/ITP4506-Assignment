@@ -216,12 +216,19 @@ body {
   padding: 30px;
 }
 
-.album {
+#tours, #hotels, #flights {
   min-height: 40rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #f7f7f7;
   position: relative
+}
+
+#tours, #flights {
+  background-color: #f4f4f4;
+}
+
+#hotels {
+  background-color: #fff;
 }
 
 footer {
@@ -486,3 +493,5 @@ textarea.ht_input {
   width: 100%;
   overflow: hidden;
 }
+
+#hotel {}
