@@ -491,7 +491,7 @@ textarea.ht_input {
   background-color: transparent;
 }
 
-#hotels .card {
+.card {
   border: none;
 }
 
@@ -503,4 +503,37 @@ textarea.ht_input {
 
 #hotels .heading-section {
   color: #fff;
+}
+
+.carousel-prev {
+  color: #fff!important;
+  position: absolute;
+  left: -10%;
+  height: 100%;
+  top: 50%;
+}
+
+.carousel-next {
+  color: #fff!important;
+  position: absolute;
+  right: -10%;
+  height: 100%;
+  top: 50%;
+}
+
+.carousel-prev>i.material-icons, .carousel-next>i.material-icons {
+  font-size: 60px;
+  vertical-align: middle
+}
+
+.carousel>.row {
+  overflow: hidden;
+}
+
+.ht-indicator {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #AFC94A;
+  z-index: 1;
 }
