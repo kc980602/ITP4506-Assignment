@@ -330,7 +330,7 @@ a.nav-link {
 .btn-search:hover {
   color: #fff;
   background-color: #84992e;
-  border-color: #5b691f;
+  border-color: #8fa536;
 }
 
 .heading-section:after {
@@ -436,15 +436,6 @@ textarea.ht_input {
   width: 100%;
 }
 
-.card .card-image .card-title {
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  padding: 24px;
-}
-
 .card .card-title {
   font-size: 24px;
   font-weight: 300;
@@ -492,4 +483,24 @@ textarea.ht_input {
   overflow: hidden;
 }
 
-#hotel {}
+#register {
+  min-height: 30em;
+}
+
+#hotels {
+  background-color: transparent;
+}
+
+#hotels .card {
+  border: none;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    width: 500px;
+  }
+}
+
+#hotels .heading-section {
+  color: #fff;
+}
