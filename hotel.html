@@ -11,11 +11,13 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/search.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 </head>
 
 <body>
-  <div class="navbar navbar-dark bg-dark navbar-expand-lg bar-sg shadow flex-wrap sticky-top pb-0">
-    <div class="container">
+  <div class="navbar navbar-light bg-light navbar-expand-lg bar-sg shadow flex-wrap sticky-top p-0">
+    <div class="ht-indicator"></div>
+    <div class="container pb-2 pt-2">
       <a href="./index.html" class="navbar-brand"><img src="./img/happytravel.png" height="56"></a>
       <div class="navbar-collapse collapse flex-row-reverse">
         <ul class="navbar-nav">
@@ -28,13 +30,13 @@
           </li>
           <!-- Public -->
           <li class="nav-item">
-            <a class="nav-link" id="tours" href="#tours">Tours</a>
+            <a id="toursTag" class="nav-link" href="./index.html#tours">Tours</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="hotels" href="#hotels">Hotel</a>
+            <a id="hotelsTag" class="nav-link" href="./index.html#hotels">Hotel</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="flights" href="#flights">Flights</a>
+            <a id="flightsTag" class="nav-link" href="./index.html#flights">Flights</a>
           </li>
 
           <!-- Before Loing -->
@@ -170,21 +172,20 @@
           <h5>Filter hotels by</h5>
           <div class="ht_filterList " id="star">
             <h6>Stars</h6>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">&#9733;&#9733;&#9733;&#9733;&#9733; 5 Stars</span>
-            </label>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">&#9733;&#9733;&#9733;&#9733; 4 Stars</span>
-            </label>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">&#9733;&#9733;&#9733; 3 Stars</span>
-            </label>
+            <div style="height: 40px;">
+              <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label></label>
+                  <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+              </fieldset>
+            </div>
           </div>
           <div class="ht_filterList " id="price">
             <h6>Price</h6>
@@ -211,12 +212,21 @@
           </div>
         </div>
         <div class="ht_searchContent col-9">
-          <div class="card">
-|
-            <div class="card-body">
-              <h4 class="card-title">Special title treatment</h4>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="card ht_s_item flex-row">
+            <div class="card-item-image">
+              <img src="./img/hotel1.jpg">
+            </div>
+            <div class="card-content">
+              <a href="#"><h5>Courtyard</h5></a>&#9733;&#9733;&#9733;
+              <div class="row">
+                <div class="col-9">
+                  3-3-1 Shibakoen Minato, Tokyo, Tokyo-to, 105-8560 日本, 3077 5726
+                </div>
+                <div class="col-3">
+                  HK$1,309
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

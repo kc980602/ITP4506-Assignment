@@ -54,18 +54,3 @@ $('.ht_searchBox_tab > .tablinks').click(function(e) {
   $(content).siblings().hide()
   $(content).show()
 });
-
-// $(document).ready(function() {
-//
-//   var currHeight = $('header').outerHeight();
-//
-//   $('.nav-link').click(function(e){
-//     var navLink = $(this).attr('href');
-//
-//     $('html, body').animate({
-//       scrollTop: $(navLink).offset().top - currHeight
-//     }, 1000);
-//
-//     e.preventDefault();
-//   });
-// });
