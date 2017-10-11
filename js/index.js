@@ -31,7 +31,20 @@ $('body').on('click', '.modal.show', async function(e) {
 })
 
 $(document).ready(function() {
-  $('.ht_searchBox,.ht_caption').addClass('show')
+  $('.ht_searchBox,.ht_caption').addClass('show');
+
+  $("#toursTag").click(function(){
+    $path=$("#tours").offset().top - 70;
+    $('html, body').animate({scrollTop:$path},1000);
+  });
+  $("#hotelsTag").click(function(){
+    $path=$("#hotels").offset().top - 70;
+    $('html, body').animate({scrollTop:$path},1000);
+  });
+  $("#flightsTag").click(function(){
+    $path=$("#flights").offset().top - 70;
+    $('html, body').animate({scrollTop:$path},1000);
+  });
 });
 
 $('.ht_searchBox_tab > .tablinks').click(function(e) {
@@ -41,3 +54,18 @@ $('.ht_searchBox_tab > .tablinks').click(function(e) {
   $(content).siblings().hide()
   $(content).show()
 });
+
+// $(document).ready(function() {
+//
+//   var currHeight = $('header').outerHeight();
+//
+//   $('.nav-link').click(function(e){
+//     var navLink = $(this).attr('href');
+//
+//     $('html, body').animate({
+//       scrollTop: $(navLink).offset().top - currHeight
+//     }, 1000);
+//
+//     e.preventDefault();
+//   });
+// });

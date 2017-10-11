@@ -538,7 +538,7 @@ textarea.ht_input {
 .ht-indicator {
   position: relative;
   width: 100%;
-  height: 4px;
+  height: 5px;
   background-color: #AFC94A;
   z-index: 1;
 }
