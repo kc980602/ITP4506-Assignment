@@ -41,10 +41,6 @@ $('.ht_searchBox_tab > .tablinks').click(function(e) {
   $(content).siblings().hide()
   $(content).show()
 });
-
-$('#hotelsSearch').click(function(){
-  window.location.href = './hotel.html';
-});
 // $.fn.preload = function() {
 //     this.each(function(){
 //         $('<img/>')[0].src = this;

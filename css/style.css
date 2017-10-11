@@ -300,7 +300,7 @@ a.nav-link {
   font-size: 14px;
 }
 
-.ht_banner a {
+.ht_banner a:not(.btn) {
   color: #AFC94A;
 }
 
