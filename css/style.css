@@ -187,12 +187,11 @@ body {
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: end;
-  justify-content: space-evenly;
   border-bottom: 1px solid rgba(128, 128, 128, .25);
 }
 
 .ht_searchBox_tab button {
-  width: 100%;
+  padding: 0 2rem;
   height: 40px;
   background-color: inherit;
   border: none;
@@ -203,8 +202,7 @@ body {
 }
 
 .ht_searchBox_tab button:hover {
-  color: white;
-  background-color: rgba(175, 201, 74, .8);
+  background-color: #eeeeee;
 }
 
 .ht_searchBox_tab button.active {
