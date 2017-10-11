@@ -335,7 +335,7 @@ a.nav-link {
 .btn-search:hover {
   color: #fff;
   background-color: #84992e;
-  border-color: #5b691f;
+  border-color: #8fa536;
 }
 
 .heading-section:after {
@@ -441,15 +441,6 @@ textarea.ht_input {
   width: 100%;
 }
 
-.card .card-image .card-title {
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  padding: 24px;
-}
-
 .card .card-title {
   font-size: 24px;
   font-weight: 300;
@@ -495,4 +486,59 @@ textarea.ht_input {
   max-width: 50%;
   width: 100%;
   overflow: hidden;
+}
+
+#register {
+  min-height: 30em;
+}
+
+#hotels {
+  background-color: transparent;
+}
+
+.card {
+  border: none;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    width: 500px;
+  }
+}
+
+#hotels .heading-section {
+  color: #fff;
+}
+
+.carousel-prev {
+  color: #fff!important;
+  position: absolute;
+  left: -10%;
+  height: 100%;
+  top: 50%;
+}
+
+.carousel-next {
+  color: #fff!important;
+  position: absolute;
+  right: -10%;
+  height: 100%;
+  top: 50%;
+}
+
+.carousel-prev>i.material-icons, .carousel-next>i.material-icons {
+  font-size: 60px;
+  vertical-align: middle
+}
+
+.carousel>.row {
+  overflow: hidden;
+}
+
+.ht-indicator {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #AFC94A;
+  z-index: 1;
 }

@@ -4,16 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
   <link rel="icon" href="./img/favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <title>Happy Travel | Hotels Search</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-  <!-- Custom styles for this template -->
+  <title>Happy Travel | Index</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/search.css" rel="stylesheet">
 </head>
@@ -50,12 +45,30 @@
       </div>
     </div>
   </div>
-
+  <ul class="ht_slideshow">
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+  </ul>
   <div class="ht_banner">
     <div class="container">
+<<<<<<< HEAD
       <div class="row">
         <div class="ht_searchBox_content">
           <div class="row" style="border-bottom:1px">
+=======
+      <div class="row card">
+        <div class="ht_searchBox_content">
+          <div class="row">
+            <div class="col text-center heading-section">
+              <h3>Hotel Search</h3>
+            </div>
+          </div>
+          <div class="row mb-4">
+>>>>>>> 861b70b92003c58c298d1a83bf7fb9c3f82502e2
             <div class="col-md-6 col-sm-12 mb-3">
               <label for="dest">Going to:</label>
               <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination"/>
@@ -83,7 +96,7 @@
                 <input id="h_out" type="date" class="ht_input" placeholder="checkOut" />
               </div>
             </div>
-            <div class="col-md-2 col-sm-4 mb-3">
+            <div class="col-sm-4 mb-3">
               <label for="rooms">Rooms:</label>
               <select  id="h_room" class="custom-select ht_input" name="">
                 <option value="1">1</option>
@@ -96,7 +109,7 @@
                 <option value="8+">8+</option>
               </select>
             </div>
-            <div class="col-md-2 col-sm-4 mb-3">
+            <div class="col-sm-4 mb-3">
               <label for="adult">Adult:</label>
               <select  id="h_adult" class="custom-select ht_input" name="">
                 <option value="0">0</option>
@@ -108,7 +121,7 @@
                 <option value="6">6</option>
               </select>
             </div>
-            <div class="col-md-2 col-sm-4 mb-3">
+            <div class="col-sm-4 mb-3">
               <div class="input-field">
                 <label for="children">Children:</label>
                 <select  id="h_children" class="custom-select ht_input" name="">
@@ -123,17 +136,9 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-2 mb-3">
+          <div class="row justify-content-center">
+            <div class="col-3">
               <button id="hotelsSearch" type="button" class="btn btn-search btn-lg btn-block">Search</button>
-            </div>
-          </div>
-          <div class="row float-right">
-            <div class="col-12">
-              <button id="hotelsSearch" type="button" class="btn  btn-lg btn-block">
-                <i class="material-icons">keyboard_arrow_up
-                </i>
-              </button>
             </div>
           </div>
         </div>
@@ -252,13 +257,26 @@
     </div>
   </div>
 
-  <footer class="text-muted">
+  <footer class="page-footer">
     <div class="container">
-      <p class="float-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p>© 2017, Happy Travel Ltd.</p>
-      <p>All rights reserved. Hong Kong Travel License (No. 1234567)</p>
+      <div class="row">
+        <div class="col-12 col-lg-7">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col-12 col-lg-5">
+          <h5 class="white-text">Contact Us</h5>
+          <input id="h_destination" type="email" class="ht_input" placeholder="Email" />
+          <textarea class="ht_input mb-4" rows="4" placeholder="Your message"></textarea>
+          <a href="#!" class="btn btn-outline-ht float-right mb-4">Send</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2017, Happy Travel Ltd.
+        <a class="float-right" href="#!">Terms &amp; Condition</a>
+      </div>
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
