@@ -2,6 +2,11 @@ body {
   min-height: 75rem;
 }
 
+.custom-control-input:checked~.custom-control-indicator {
+  color: #fff;
+  background-color: #AFC94A;
+}
+
 ::selection {
   color: #fcfcfc;
   background: #AFC94A;
@@ -491,5 +496,3 @@ textarea.ht_input {
   width: 100%;
   overflow: hidden;
 }
-
-#hotel {}

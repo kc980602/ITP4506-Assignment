@@ -9,7 +9,7 @@
   <link rel="icon" href="./img/favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <title>Happy Travel | Index</title>
+  <title>Happy Travel | Hotels Search</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
@@ -54,7 +54,7 @@
   <div class="ht_banner">
     <div class="container">
       <div class="row">
-        <div class="ht_searchBox_content" id="hotels">
+        <div class="ht_searchBox_content">
           <div class="row" style="border-bottom:1px">
             <div class="col-md-6 col-sm-12 mb-3">
               <label for="dest">Going to:</label>
@@ -142,13 +142,84 @@
   </div>
   <div class="ht_content">
     <div class="container">
-
+      <div class="ht_pageTitle">
+        <h2>Tokyo (and vicinity): 989 properties</h2>
+      </div>
       <div class="row">
         <div class="ht_searchBar col-3">
-sssssssssss
+          <h5>Search hotel by name</h5>
+          <div class="row">
+            <div class="col-md-8 mb-3">
+              <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination"/>
+              <datalist id="destination">
+                <option value="Tokyo, Japan"></option>
+                <option value="Osaka, Japan"></option>
+                <option value="Nagoya, Japan"></option>
+                <option value="Incheon, South Korea"></option>
+                <option value="Seoul, South Korea"></option>
+                <option value="Busan, South Korea"></option>
+                <option value="Taipei, Taiwan"></option>
+                <option value="Kaohsiung, Taiwan"></option>
+                <option value="Kenting, Taiwan"></option>
+              </datalist>
+            </div>
+            <div class="col-md-4" style="padding-left: 0px;">
+              <button id="hotelsSearch" type="button" class="btn btn-search btn-lg btn-block" style="height:31px;padding:2px 0 0 0;"><i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+          <h5>Filter hotels by</h5>
+          <div class="ht_filterList " id="star">
+            <h6>Stars</h6>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">&#9733;&#9733;&#9733;&#9733;&#9733; 5 Stars</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">&#9733;&#9733;&#9733;&#9733; 4 Stars</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">&#9733;&#9733;&#9733; 3 Stars</span>
+            </label>
+          </div>
+          <div class="ht_filterList " id="price">
+            <h6>Price</h6>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Less than HK$500</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">HK$500 to HK$1000</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">HK$1001 to HK$1500</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">HK$1501 to HK$2000</span>
+            </label>
+          </div>
         </div>
         <div class="ht_searchContent col-9">
-
+          <div class="card">
+|
+            <div class="card-body">
+              <h4 class="card-title">Special title treatment</h4>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
         </div>
       </div>
 

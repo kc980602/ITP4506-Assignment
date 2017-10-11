@@ -41,31 +41,3 @@ $('.ht_searchBox_tab > .tablinks').click(function(e) {
   $(content).siblings().hide()
   $(content).show()
 });
-// $.fn.preload = function() {
-//     this.each(function(){
-//         $('<img/>')[0].src = this;
-//     });
-// }
-// var images = Array("img/korea.jpg","img/tokyo.jpg","img/taiwan.jpg");
-//
-// $([images[0],images[1],images[2]]).preload();
-//
-// var currimg = 1;
-// $(document).ready(function(){
-//   function changeImg(){
-//     $('.ht_banner').animate({ opacity: 1 }, 500,function(){
-//       $('.ht_banner').animate({ opacity: 0.9 }, 100,function(){
-//         currimg++;
-//         if(currimg > images.length-1){
-//           currimg=0;
-//         }
-//         var newimage = images[currimg];
-//         $('.ht_banner').css("background-image", "url("+newimage+")");
-//         $('.ht_banner').animate({ opacity: 1 }, 400,function(){
-//           setTimeout(changeImg,1000);
-//         });
-//       });
-//     });
-//   }
-//   setTimeout(changeImg,1000);
-// });

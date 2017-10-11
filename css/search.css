@@ -1,15 +1,30 @@
 .ht_content {
-  min-height: 50rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: #f7f7f7;
-  position: relative
+}
+
+.ht_pageTitle {
+  padding: 5px 0 5px 0;
+  color: #00355F;
 }
 
 .ht_searchBar {
-  background-color: red;
+  background-color: inherit;
+  color: #557894;
 }
 
-.ht_searchContent {
-  background-color: blue;
+.ht_searchBar h5 {
+  margin-bottom: 20px;
 }
+
+.ht_searchBar h6 {
+  margin-bottom: 10px;
+}
+
+.ht_filterList {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.ht_searchContent {}
