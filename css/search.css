@@ -43,7 +43,6 @@ fieldset, label {
   padding: 0;
 }
 
-
 /****** Style Star Rating Widget *****/
 
 .rating {
@@ -73,7 +72,6 @@ fieldset, label {
   float: right;
 }
 
-
 /***** CSS Magic to Highlight Stars on Hover *****/
 
 .rating>input:checked~label,
@@ -85,7 +83,6 @@ fieldset, label {
 .rating:not(:checked)>label:hover~label {
   color: #FFD700;
 }
-
 
 /* hover previous stars in list */
 
@@ -110,7 +107,7 @@ fieldset, label {
   border-radius: 2px;
 }
 
-.card:hover {
+.card.ht_s_item:hover {
   border: 2px solid #AFC94A;
 }
 
