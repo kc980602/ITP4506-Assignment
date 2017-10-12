@@ -162,3 +162,7 @@ fieldset, label {
 .ht_s_item.card {
   cursor: pointer;
 }
+
+.ht_s_item .card-content {
+  width: 100%
+}
