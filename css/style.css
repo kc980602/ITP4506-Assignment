@@ -515,7 +515,6 @@ textarea.ht_input {
   color: #fff!important;
   position: absolute;
   left: -10%;
-  height: 100%;
   top: 50%;
 }
 
@@ -523,7 +522,6 @@ textarea.ht_input {
   color: #fff!important;
   position: absolute;
   right: -10%;
-  height: 100%;
   top: 50%;
 }
 
@@ -542,4 +540,9 @@ textarea.ht_input {
   height: 5px;
   background-color: #AFC94A;
   z-index: 1;
+}
+
+.animate-show {
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s;
 }

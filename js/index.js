@@ -64,8 +64,26 @@ $('.ht_searchBox_tab > .tablinks').click(function(e) {
 });
 
 $('.carousel-prev').click(function(e) {
-  $(this).siblings('.carousel-items').animate({transform: 'translateX(-50%)'},350)
+  let item = $(this).siblings('.carousel-items')
+  let index = item.data('index')
+  let totalPage = Math.ceil(item.children().length / 3) - 1
+  index--
+  let position = index * 200
+  if (index < 0) {
+    index = totalPage
+  }
+  item.data('index', index)
+  item.children().css({transform: 'translateX('+position+'%)'})
 });
 $('.carousel-next').click(function(e) {
-  $(this).siblings('.carousel-items').animate({left: '200px'},350)
+  let item = $(this).siblings('.carousel-items')
+  let index = item.data('index')
+  let totalPage = Math.ceil(item.children().length / 3) - 1
+  index++
+  if (index > totalPage) {
+    index = 0
+  }
+  let position = index * -200
+  item.data('index', index)
+  item.children().css({transform: 'translateX('+position+'%)'})
 });
