@@ -160,6 +160,28 @@ fieldset, label {
   cursor: pointer;
 }
 
-.ht_s_item .card-content {
-  width: 100%
+.card-content {
+  width: 100%;
+}
+
+.card-content p {
+  margin-bottom: 10px;
+}
+
+.card-content p .star {
+  color: #FFC000;
+  margin-right: 30px;
+}
+
+.card-content .ht_item_review {
+  : #FFC000;
+}
+
+.card-content p .score {
+  font-weight: 700;
+  border-radius: 2px;
+  background: #AFC94A;
+  color: #fff;
+  padding: 1px 5px;
+  margin-right: 5px;
 }
