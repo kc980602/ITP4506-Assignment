@@ -1,3 +1,11 @@
+.ht_banner .container {
+  width: 60%;
+}
+
+.ht_searchContent {
+  min-height: 50em;
+}
+
 .ht_content {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -35,6 +43,7 @@ fieldset, label {
   padding: 0;
 }
 
+
 /****** Style Star Rating Widget *****/
 
 .rating {
@@ -64,6 +73,7 @@ fieldset, label {
   float: right;
 }
 
+
 /***** CSS Magic to Highlight Stars on Hover *****/
 
 .rating>input:checked~label,
@@ -75,6 +85,7 @@ fieldset, label {
 .rating:not(:checked)>label:hover~label {
   color: #FFD700;
 }
+
 
 /* hover previous stars in list */
 
@@ -146,4 +157,8 @@ fieldset, label {
 .card .card-title {
   font-size: 24px;
   font-weight: 300;
+}
+
+.ht_s_item.card {
+  cursor: pointer;
 }

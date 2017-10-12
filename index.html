@@ -37,7 +37,10 @@
 
           <!-- Before Loing -->
           <li class="nav-item">
-            <a class="nav-link modal-trigger" href="#" data-toggle="modal" data-target="#loginModal">Sign-In / Sign-Up</a>
+            <a class="nav-link modal-trigger" href="#" data-toggle="modal" data-target="#registerModal">Sign-Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link modal-trigger" href="#" data-toggle="modal" data-target="#loginModal">Sign-In</a>
           </li>
         </ul>
       </div>
@@ -270,7 +273,7 @@
           <div class="card ht_item flex-row">
             <div class="card-image">
               <img src="./img/tokyo8.jpg">
-              <span class="card-title">$1,500<br />Japan, Tokyo</span>
+              <span class="card-title mb-0">$1,500<br />Japan, Tokyo</span>
             </div>
             <div class="card-content">
               <h3>Tokyo 5 Days Featured Tour</h3>
@@ -281,7 +284,7 @@
           <div class="card ht_item flex-row">
             <div class="card-image order-12">
               <img src="./img/korea2.jpg">
-              <span class="card-title">$1,200<br />Korea, Seoul</span>
+              <span class="card-title mb-0">$1,200<br />Korea, Seoul</span>
             </div>
             <div class="card-content">
               <h3>Korea 4 Days Shopping Tour</h3>
@@ -292,7 +295,7 @@
           <div class="card ht_item flex-row">
             <div class="card-image">
               <img src="./img/taiwan7.jpg">
-              <span class="card-title">$1,500<br />Taiwan, Taipei</span>
+              <span class="card-title mb-0">$1,500<br />Taiwan, Taipei</span>
             </div>
             <div class="card-content">
               <h3>Taipei Reef River Springs 4 Days Tour</h3>
@@ -304,7 +307,7 @@
       </div>
       <div class="row">
         <div class="col-12 text-center">
-          <a href="#" class="btn btn-outline-ht">View more</a>
+          <a href="./tour.html" class="btn btn-outline-ht">View more</a>
         </div>
       </div>
     </div>
@@ -320,12 +323,12 @@
         <div class="col-12 carousel">
           <a class="carousel-prev" href="#!"><i class="material-icons">keyboard_arrow_left</i></a>
           <a class="carousel-next" href="#!"><i class="material-icons">keyboard_arrow_right</i></a>
-          <div class="row flex-row flex-nowrap">
+          <div class="row flex-row flex-nowrap carousel-items">
             <div class="col-4">
               <div class="card">
                 <div class="card-image">
                   <img src="./img/hotel1.jpg" height="220px">
-                  <span class="card-title">Japan, Tokyo</span>
+                  <span class="card-title mb-0">Japan, Tokyo</span>
                 </div>
                 <div class="card-content">
                   <h4>Courtyard</h4>
@@ -338,7 +341,7 @@
               <div class="card">
                 <div class="card-image">
                   <img src="./img/hotel2.jpg" height="220px">
-                  <span class="card-title">Japan, Tokyo</span>
+                  <span class="card-title mb-0">Japan, Tokyo</span>
                 </div>
                 <div class="card-content">
                   <h4>The Prince Gallery</h4>
@@ -351,7 +354,7 @@
               <div class="card">
                 <div class="card-image">
                   <img src="./img/hotel3.jpg" height="220px">
-                  <span class="card-title">Japan, Tokyo</span>
+                  <span class="card-title mb-0">Japan, Tokyo</span>
                 </div>
                 <div class="card-content">
                   <h4>Grand Hyatt Tokyo</h4>
@@ -364,7 +367,7 @@
               <div class="card">
                 <div class="card-image">
                   <img src="./img/hotel2.jpg"height="220px">
-                  <span class="card-title">Japan, Tokyo</span>
+                  <span class="card-title mb-0">Japan, Tokyo</span>
                 </div>
                 <div class="card-content">
                   <h4>Grand Hyatt Tokyo</h4>
@@ -377,7 +380,7 @@
               <div class="card">
                 <div class="card-image">
                   <img src="./img/hotel3.jpg" height="220px">
-                  <span class="card-title">Japan, Tokyo</span>
+                  <span class="card-title mb-0">Japan, Tokyo</span>
                 </div>
                 <div class="card-content">
                   <h4>Grand Hyatt Tokyo</h4>
@@ -391,7 +394,7 @@
       </div>
       <div class="row">
         <div class="col-12 text-center">
-          <a href="#" class="btn btn-outline-ht">View more</a>
+          <a href="./hotel.html" class="btn btn-outline-ht">View more</a>
         </div>
       </div>
     </div>
@@ -414,6 +417,36 @@
             <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="sizing-addon2">
           </div>
           <a href="/forget"><small class="float-right">Forgot your password?</small></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary">Register</button>
+          <button type="button" class="btn btn-ht">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2"><i class="material-icons">person</i></span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="sizing-addon2">
+          </div>
+          <br />
+          <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2"><i class="material-icons">vpn_key</i></span>
+            <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="sizing-addon2">
+          </div>
+          <br />
+          <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2"><i class="material-icons">vpn_key</i></span>
+            <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Confirm Password" aria-describedby="sizing-addon2">
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary">Register</button>

@@ -263,27 +263,27 @@ a.nav-link {
   box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .05), inset 1px 1px 0 rgba(0, 0, 0, .05);
 }
 
-#loginModal .modal-header {
+#loginModal .modal-header, #registerModal .modal-header {
   justify-content: center;
 }
 
-#loginModal .modal-footer {
+#loginModal .modal-footer, #registerModal .modal-footer {
   justify-content: space-evenly;
   padding: 0;
 }
 
-#loginModal .modal-footer>button {
+#loginModal .modal-footer>button, #registerModal .modal-footer>button {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
   border-radius: 0;
 }
 
-#loginModal .modal-footer>:not(:last-child) {
+#loginModal .modal-footer>:not(:last-child), #registerModal .modal-footer>:not(:last-child) {
   border-bottom-left-radius: .25rem;
 }
 
-#loginModal .modal-footer>:not(:first-child) {
+#loginModal .modal-footer>:not(:first-child), #registerModal .modal-footer>:not(:first-child) {
   border-bottom-right-radius: .25rem;
 }
 
@@ -462,7 +462,7 @@ textarea.ht_input {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 100%;
+  width: 100%;
   padding: 24px;
   background-color: rgba(0, 0, 0, 0.5);
 }

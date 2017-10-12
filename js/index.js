@@ -32,7 +32,13 @@ $('body').on('click', '.modal.show', async function(e) {
 
 $(document).ready(function() {
   $('.ht_searchBox,.ht_caption').addClass('show');
-
+  if (location.hash) {
+    let item = $(location.hash)
+    if (item) {
+      let position = item.offset().top - 70
+      $('html, body').animate({scrollTop: position},1000)
+    }
+  }
   $("#toursTag").click(function(){
     $path=$("#tours").offset().top - 70;
     $('html, body').animate({scrollTop:$path},1000);
@@ -53,4 +59,11 @@ $('.ht_searchBox_tab > .tablinks').click(function(e) {
   $(this).addClass('active')
   $(content).siblings().hide()
   $(content).show()
+});
+
+$('.carousel-prev').click(function(e) {
+  // transform: translateX(-50%);
+});
+$('.carousel-next').click(function(e) {
+  $(this).siblings('.carousel-items').animate({left: '200px'},350)
 });
