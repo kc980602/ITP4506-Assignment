@@ -14,7 +14,7 @@ $('.modal-trigger').click(async function(e) {
   }
 })
 
-$('body').on('click', '.modal.show', async function(e) {
+$('body').on('click', '.modal.show, .modal-dismiss', async function(e) {
   if (e.target !== this)
     return;
   let activeModal = $('.modal.show, .modal-backdrop')
@@ -24,7 +24,7 @@ $('body').on('click', '.modal.show', async function(e) {
       $('body').css('overflow-y', 'scroll')
       $(this).remove()
     } else if (!$(this).hasClass('show')) {
-      $('body').css('overflow-y', 'scroll')
+      $('body').css({'overflow-y': 'scroll'})
       $(this).attr('style', '')
     }
   })
@@ -34,24 +34,16 @@ $(document).ready(function() {
   $('.ht_searchBox,.ht_caption').addClass('show');
   if (location.hash) {
     try {
-      let item = $(location.hash)
-      if (item) {
-        let position = item.offset().top - 70
-        $('html, body').animate({scrollTop: position},1000)
-      }
+      let position = $(location.hash).offset().top - 70
+      $('html, body').animate({scrollTop: position},1000)
     } catch(e) {}
   }
-  $("#toursTag").click(function(){
-    $path=$("#tours").offset().top - 70;
-    $('html, body').animate({scrollTop:$path},1000);
-  });
-  $("#hotelsTag").click(function(){
-    $path=$("#hotels").offset().top - 70;
-    $('html, body').animate({scrollTop:$path},1000);
-  });
-  $("#flightsTag").click(function(){
-    $path=$("#flights").offset().top - 70;
-    $('html, body').animate({scrollTop:$path},1000);
+  $("#toursTag, #hotelsTag, #flightsTag").click(function(){
+    try {
+      let scrollTo = $(this).attr('href')
+      let position = $(scrollTo).offset().top - 70
+      $('html, body').animate({scrollTop: position},1000)
+    } catch(e) {}
   });
 });
 
