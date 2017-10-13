@@ -30,18 +30,21 @@
           </li>
           <!-- Public -->
           <li class="nav-item">
-            <a id="toursTag" class="nav-link" href="./index.html#tours">Tours</a>
+            <a id="toursTag" class="nav-link" href="#tours">Tours</a>
           </li>
           <li class="nav-item">
-            <a id="hotelsTag" class="nav-link" href="./index.html#hotels">Hotel</a>
+            <a id="hotelsTag" class="nav-link" href="#hotels">Hotel</a>
           </li>
           <li class="nav-item">
-            <a id="flightsTag" class="nav-link" href="./index.html#flights">Flights</a>
+            <a id="flightsTag" class="nav-link" href="#flights">Flights</a>
           </li>
 
           <!-- Before Loing -->
           <li class="nav-item">
-            <a class="nav-link modal-trigger" href="#" data-toggle="modal" data-target="#loginModal">Sign-In / Sign-Up</a>
+            <a class="nav-link" href="./register.html">Sign-Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link modal-trigger" href="#" data-toggle="modal" data-target="#loginModal">Sign-In</a>
           </li>
         </ul>
       </div>
@@ -210,28 +213,46 @@
               <span class="custom-control-description">HK$1501 to HK$2000</span>
             </label>
           </div>
+          <div class="ht_filterList " id="price">
+            <h6>Amenities</h6>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Wifi</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Restaurant</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Parking</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Airport shuttle</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Gym</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Bar</span>
+            </label>
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Spa</span>
+            </label>
+          </div>
         </div>
         <div class="ht_searchContent col-9">
-          <div class="card ht_s_item flex-row mb-4 mt-4" onclick="window.location = './hotels_detail.html'">
-            <div class="card-item-image">
-              <img src="./img/hotel1.jpg">
-            </div>
-            <div class="card-content">
-              <a href="#"><h5>Courtyard</h5></a>
-              <p><span class="star">&#9733;&#9733;&#9733;</span>Shinjuku/Nakano</p>
-              <p class="ht_item_review"><span class="score">4.6</span>/5 Outstanding</p>
-              <div class="row">
-                <div class="col-9">
-                  3-3-1 Shibakoen Minato, Tokyo, Tokyo-to, 105-8560 日本, 3077 5726
-                </div>
-                <div class="col-3">
-                  HK$1,309
-                  <button id="hotelsSearch" type="button" class="btn btn-search btn-lg btn-block" style="height:31px;padding:2px 0 0 0;">Select
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <nav class="align-items-end flex-row mt-5">
             <ul class="pagination justify-content-center">
@@ -302,5 +323,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/lib/hotel.js"></script>
 </body>
 </html>

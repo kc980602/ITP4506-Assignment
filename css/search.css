@@ -32,8 +32,11 @@
 }
 
 .ht_filterList {
+  padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 2px solid #e0e0e0;
+  display: inline-grid;
+  width: 100%;
 }
 
 .ht_searchContent {}
@@ -156,16 +159,17 @@ fieldset, label {
   font-weight: 300;
 }
 
-.ht_s_item.card {
-  cursor: pointer;
-}
-
 .card-content {
   width: 100%;
 }
 
+.card-content a {
+  color: #557894;
+}
+
 .card-content p {
   margin-bottom: 10px;
+  display: inline;
 }
 
 .card-content p .star {
@@ -173,8 +177,22 @@ fieldset, label {
   margin-right: 30px;
 }
 
+.card-content .ht_item_service .service {
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  margin-right: 3px;
+}
+
+.card-content .ht_item_service .service i {
+  color: #557894;
+  font-size: 18px;
+  margin-right: 6px;
+}
+
 .card-content .ht_item_review {
-  : #FFC000;
+  color: #FFC000;
 }
 
 .card-content p .score {
@@ -184,4 +202,30 @@ fieldset, label {
   color: #fff;
   padding: 1px 5px;
   margin-right: 5px;
+}
+
+.card-content p .review {
+  color: #557894;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+}
+
+.card-content p .price {
+  color: #557894;
+  font-size: 30px;
+}
+
+.card-content button {
+  height: 31px;
+  padding: 2px 0 0 0;
+}
+
+.page-link {
+  color: #557894;
+}
+
+.page-item.active .page-link {
+  background-color: #557894;
+  border-color: #557894;
 }
