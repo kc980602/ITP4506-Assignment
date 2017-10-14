@@ -1,119 +1,82 @@
 var tours = [
   {
     id: 1,
-    name: 'Hotel Gracery Shinjuku Tokyo',
-    star: 4,
-    rate: 4.7,
-    review: 'Outstanding',
+    tid: 'AJHTF-5P',
+    name: 'Tokyo grape picking experience, Fujitsu two days free exercise, 5 days regiment',
+    date: '2017-09-01 to 2017-11-30',
     location: 'Tokyo',
-    service: ['wifi', 'restaurant', 'pool'],
-    price: 1465
+    price: 4999,
+    img: 'tokyo4.jpg'
   },
   {
     id: 2,
-    name: 'Hotel Metropolitan Tokyo Ikebukuro',
-    star: 4,
-    rate: 4.7,
-    review: 'Outstanding',
+    tid: 'AJHTN-5P',
+    name: 'Tokyo Nikko Kinugawa Hot Springs Free Shopping Red Leaf View 5 Days Mission',
+    date: '2017-09-01 to 2017-11-30',
     location: 'Tokyo',
-    service: ['wifi', 'restaurant'],
-    price: 1299
+    price: 5399,
+    img: 'tokyo8.jpg'
   },
   {
     id: 3,
-    name: 'Keio Plaza Hotel Tokyo',
-    star: 5,
-    rate: 4.7,
-    review: 'Outstanding',
+    tid: 'AJHTC-5P',
+    name: 'Cathay Pacific Tokyo Fuji Mountain free event Shinjuku Odaiba shopping hot spring beauty view 5 days regiment',
+    date: '2017-09-01 至 2017-12-15',
     location: 'Tokyo',
-    service: ['wifi', 'restaurant', 'parking'],
-    price: 1946
+    price: 5399,
+    img: 'tokyo3.jpg'
   },
   {
     id: 4,
-    name: 'Jr Kyushu Hotel Blossom Shinjuku',
-    star: 4,
-    rate: 4.7,
-    review: 'Outstanding',
+    tid: 'AJHCF-5P',
+    name: 'Tokyo Fuji Mountain Fuji Ji moving park Disney Shinjuku Hongye beauty 5 days group',
+    date: '2017-09-01 to 2017-11-30',
     location: 'Tokyo',
-    service: ['wifi', 'restaurant', 'parking'],
-    price: 1938
+    price: 5999,
+    img: 'tokyo.jpg'
   },
   {
     id: 5,
-    name: 'Shinjuku Washington Hotel Tokyo',
-    star: 3,
-    rate: 4.6,
-    review: 'Outstanding',
+    tid: 'AJSTF-5P',
+    name: 'Tokyo Ace Fuji Fuji Jiuji moving park Disney Shinjuku 5 days group',
+    date: '2017-08-01 至 2017-10-31',
     location: 'Tokyo',
-    service: ['wifi', 'restaurant'],
-    price: 3868
+    price: 6399,
+    img: 'tokyo9.jpg'
   },
   {
     id: 6,
-    name: 'Hotel Metropolitan Tokyo Ikebukuro',
-    star: 4,
-    rate: 4.7,
-    review: 'Outstanding',
-    location: 'Ikebukuro/Itabashi',
-    service: ['wifi', 'restaurant'],
-    price: 1465
+    tid: 'AJHTF-5P',
+    name: 'Tokyo Osaka Kyoto Nara Wakayama Sightseeing Hot Springs 7 Days Mission',
+    date: '2017-09-01 to 2017-11-30',
+    location: 'Tokyo',
+    price: 8399,
+    img: 'tokyo3.jpg'
   },
   {
     id: 7,
-    name: 'Hotel Sunroute Plaza Shinjuku',
-    star: 4,
-    rate: 4.6,
-    review: 'Outstanding',
+    tid: 'AJHTF-5P',
+    name: 'Toky, Fujitsu two days free exercise, 5 days regiment',
+    date: '2017-09-01 to 2017-11-30',
     location: 'Tokyo',
-    service: ['wifi', 'restaurant', 'parking'],
-    price: 1758
-  },
-  {
-    id: 8,
-    name: 'Hyatt Regency Tokyo',
-    star: 5,
-    rate: 4.9,
-    review: 'Perfect',
-    location: 'Tokyo',
-    service: ['wifi','restaurant','parking','pool','shuttle','gym','bar','spa'],
-    price: 1903
+    price: 6099,
+    img: 'tokyo2.jpg'
   },
 ];
 
-var serviceItem = {
-  wifi: '<span class="service"><i class="material-icons">wifi</i>Wifi</span>',
-  restaurant: '<span class="service"><i class="material-icons">restaurant</i>Restaurant</span>',
-  parking: '<span class="service"><i class="material-icons">local_parking</i>Parking</span>',
-  pool: '<span class="service"><i class="material-icons">pool</i>Swimming pool</span>',
-  shuttle: '<span class="service"><i class="material-icons">airport_shuttle</i>Airport shuttle</span>',
-  gym: '<span class="service"><i class="material-icons">fitness_center</i>Gym</span>',
-  bar: '<span class="service"><i class="material-icons">local_bar</i>Bar</span>',
-  spa: '<span class="service"><i class="material-icons">spa</i>Spa</span>'
-};
-
 $(document).ready(function(){
   tours.forEach(function(element){
-    var stars = '&#9733;'.repeat(element.star);
-    var services = "";
-    element.service.forEach(function(i){
-      services += serviceItem[i];
-    });
     $( ".ht_searchContent" ).prepend(`<div id="item" class="card ht_s_item flex-row mb-4 mt-4" onclick="window.location = './hotels_detail.html'">
-      <div class="card-item-image"><img src="./img/hotels/hotel${element.id}.jpg"></div>
+      <div class="card-item-image"><img src="./img/${element.img}"></div>
       <div class="card-content">
         <div class="row">
-          <div class="col-8">
+          <div class="col-12">
             <h5><a href="#">${element.name}</a>
-              <p><span class="star">${stars}</span></p>
             </h5>
-            <p>Shinjuku/Nakano</p>
+            <p>${element.date}</p><br>
+            <p>${element.tid}</p>
             <div class="ht_item_service">
-              ${services}
             </div>
-          </div>
-          <div class="col-4 text-right">
-            <p class="ht_item_review"><span class="score">${element.rate}</span>/5<span class="review">${element.review}</span></p>
           </div>
         </div>
         <div class="row">

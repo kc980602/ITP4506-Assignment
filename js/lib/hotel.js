@@ -107,7 +107,7 @@ $(document).ready(function(){
             <h5><a href="#">${element.name}</a>
               <p><span class="star">${stars}</span></p>
             </h5>
-            <p>Shinjuku/Nakano</p>
+            <p>${element.location}</p>
             <div class="ht_item_service">
               ${services}
             </div>

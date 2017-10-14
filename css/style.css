@@ -195,7 +195,7 @@
   padding: 30px;
 }
 
-#tours, #hotels, #flights {
+#tours, #hotels, #flights, #cart {
   min-height: 40rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -459,7 +459,7 @@ textarea.ht_input {
 }
 
 .card.ht_item .card-image {
-  max-height: 350px;
+  max-height: 300px;
   max-width: 50%;
   width: 100%;
   overflow: hidden;

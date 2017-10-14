@@ -184,38 +184,30 @@
               </div>
               <div class="ht_searchBox_content" id="content-tours" style="display: none">
                 <div class="row">
-                  <div class="col-6 mb-3">
-                    <label for="from">Flying from</label>
-                    <input id="f_from" type="text" class="ht_input" placeholder="Source"/>
-                  </div>
-                  <div class="col-6 mb-3">
-                    <label for="dest">Flying to</label>
-                    <input id="f_to" type="text" class="ht_input" placeholder="Destination"/>
-                  </div>
-                  <div class="col-6 mb-3">
-                    <div class="input-field">
-                      <label for="depart">Check-in:</label>
-                      <input id="h_in" type="text" class="ht_input" placeholder="yyyy-mm-dd" />
-                    </div>
-                  </div>
-                  <div class="col-6 mb-3">
-                    <div class="input-field">
-                      <label for="depart">Check-out:</label>
-                      <input id="h_out" type="text" class="ht_input" placeholder="yyyy-mm-dd" />
-                    </div>
+                  <div class="col-12 mb-3">
+                    <label for="dest">Travel type</label>
+                    <input id="h_destination" type="text" class="ht_input" placeholder="Long Haul / Short Haul"/>
                   </div>
                   <div class="col-12 mb-3">
-                    <label for="rooms">Rooms:</label>
-                    <select id="h_room" class="custom-select ht_input" name="">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8+">8+</option>
-                    </select>
+                    <label for="dest">Going to:</label>
+                    <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination"/>
+                    <datalist id="destination">
+                      <option value="Tokyo, Japan"></option>
+                      <option value="Osaka, Japan"></option>
+                      <option value="Nagoya, Japan"></option>
+                      <option value="Incheon, South Korea"></option>
+                      <option value="Seoul, South Korea"></option>
+                      <option value="Busan, South Korea"></option>
+                      <option value="Taipei, Taiwan"></option>
+                      <option value="Kaohsiung, Taiwan"></option>
+                      <option value="Kenting, Taiwan"></option>
+                    </datalist>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <div class="input-field">
+                      <label for="depart">Depart date:</label>
+                      <input id="h_out" type="text" class="ht_input" placeholder="yyyy-mm-dd" />
+                    </div>
                   </div>
                   <div class="col-6 mb-3">
                     <label for="adult">Adult:</label>
