@@ -80,14 +80,14 @@
           </div>
         </div>
       </div>
-      <div class="row card" id="registerBox">
+      <div class="row card" id="registerBox" data-step="1">
         <div class="ht_searchBox_content">
           <div class="row">
             <div class="col text-center heading-section">
               <h3>Join HappyTravel</h3>
             </div>
           </div>
-          <div class="row">
+          <div class="row" id="step1">
             <div class="col-12 mb-3">
               <div class="input-group">
                 <span class="input-group-addon"><i class="material-icons">email</i></span>
@@ -122,9 +122,46 @@
               </div>
             </div>
           </div>
+
+          <div class="row" id="step2">
+            <div class="col-12 mb-3">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="material-icons">email</i></span>
+                <input type="text" class="form-control" placeholder="First Name">
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="material-icons">person</i></span>
+                <input type="text" class="form-control" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
+                <input type="password" class="form-control" placeholder="Password">
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
+                <input type="password" class="form-control" placeholder="Confirm Password">
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="input-group">
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">I agree to the <a href="./terms.html" class="text-ht">Terms &amp; Condition</a> and <a href="./privacy.html" class="text-ht">Privacy Policy</a></span>
+                </label>
+              </div>
+            </div>
+          </div>
           <div class="row justify-content-center">
-            <div class="col-3">
-              <button id="hotelsSearch" type="button" class="btn btn-outline-ht btn-lg btn-block">Next</button>
+            <div class="col-3 text-center">
+              <button id="registerBack" type="button" class="btn btn-outline-danger" disabled>Back</button>
+              <button id="registerNext" type="button" class="btn btn-ht">Next</button>
             </div>
           </div>
         </div>
@@ -157,49 +194,6 @@
     </div>
   </div>
 
-  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="registerModalLabel">Register</h5>
-        </div>
-        <div class="modal-body">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">person</i></span>
-            <input type="text" class="form-control" placeholder="Username">
-          </div>
-          <br />
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-            <input type="password" class="form-control" placeholder="Password">
-          </div>
-          <br />
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-            <input type="password" class="form-control" placeholder="Confirm Password">
-          </div>
-          <br />
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">email</i></span>
-            <input type="email" class="form-control" placeholder="Email">
-          </div>
-          <br />
-          <div class="input-group">
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">I agree to the <a href="./terms.html" class="text-ht">Terms &amp; Condition</a></span>
-            </label>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger modal-dismiss">Cancel</button>
-          <button type="button" class="btn btn-ht">Register</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <footer class="page-footer">
     <div class="container">
       <div class="row">
@@ -225,5 +219,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/register.js"></script>
 </body>
 </html>
