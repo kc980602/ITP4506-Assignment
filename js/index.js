@@ -1,4 +1,4 @@
-$('.modal-trigger').click(async function(e) {
+$('body').on('click', '.modal-trigger', async function(e) {
   if ($(this).data('toggle')) {
     e.preventDefault()
     let modal = $(this).data('target')
@@ -28,6 +28,14 @@ $('body').on('click', '.modal.show, .modal-dismiss', async function(e) {
   }, 150)
 })
 
+$('body').on('click', '#toursTag, #hotelsTag, #flightsTag', function(){
+  try {
+    let scrollTo = $(this).attr('href')
+    let position = $(scrollTo).offset().top - 70
+    $('html, body').animate({scrollTop: position},1000)
+  } catch(e) {}
+})
+
 $(document).ready(function() {
   $('.ht_searchBox,.ht_caption').addClass('show');
   if (location.hash) {
@@ -36,13 +44,7 @@ $(document).ready(function() {
       $('html, body').animate({scrollTop: position},1000)
     } catch(e) {}
   }
-  $("#toursTag, #hotelsTag, #flightsTag").click(function(){
-    try {
-      let scrollTo = $(this).attr('href')
-      let position = $(scrollTo).offset().top - 70
-      $('html, body').animate({scrollTop: position},1000)
-    } catch(e) {}
-  });
+  showNavItem()
 });
 
 $('.ht_searchBox_tab > .tablinks').click(function(e) {
@@ -78,7 +80,7 @@ $('.carousel-next').click(function(e) {
   item.children().css({transform: 'translateX('+position+'%)'})
 });
 
-$('#btnLogin').click(function(e) {
+$('#btnLogin').click(function() {
   let username = $('#loginUsername').val()
   let password = $('#loginPassword').val()
   if (!username) {
@@ -89,7 +91,14 @@ $('#btnLogin').click(function(e) {
     dismissModal()
     return showAlert('Password cannot be empty!')
   }
+  localStorage.setItem('auth', 1)
+  showNavItem()
   dismissModal()
+})
+
+$('body').on('click', '#signout', function() {
+  localStorage.setItem('auth', 0)
+  showNavItem()
 })
 
 async function dismissModal() {
@@ -118,4 +127,17 @@ async function showAlert(msg) {
     $('#errorModal').addClass('show')
     $('body').append('<div class="modal-backdrop fade"></div>').css('overflow-y', 'hidden').promise()
   }, 150)
+}
+
+function showNavItem() {
+  $('.navbar-nav').html('<li class="nav-item"> <a id="toursTag" class="nav-link" href="#tours">Tours</a> </li> <li class="nav-item"> <a id="hotelsTag" class="nav-link" href="#hotels">Hotel</a> </li> <li class="nav-item"> <a id="flightsTag" class="nav-link" href="#flights">Flights</a> </li>')
+  if (localStorage.getItem('auth') > 0) {
+    $('.navbar-nav').prepend(`
+      <li class="nav-item"><a class="nav-link" hef="./account.html">Account</a></li>
+      <li class="nav-item"> <a class="nav-link" href="./cart.html">My Cart</a></li>
+    `)
+    $('.navbar-nav').append('<li class="nav-item"><a class="nav-link" href="#!" id="signout">Sign-out</a></li>')
+  } else {
+    $('.navbar-nav').append('<li class="nav-item"> <a class="nav-link" href="./register.html">Sign-Up</a> </li> <li class="nav-item"> <a class="nav-link modal-trigger" href="#" data-toggle="modal" data-target="#loginModal">Sign-In</a> </li>')
+  }
 }
