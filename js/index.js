@@ -17,17 +17,15 @@ $('.modal-trigger').click(async function(e) {
 $('body').on('click', '.modal.show, .modal-dismiss', async function(e) {
   if (e.target !== this)
     return;
-  let activeModal = $('.modal.show, .modal-backdrop')
-  await activeModal.removeClass('show')
-  activeModal.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-    if ($(this).hasClass('modal-backdrop')) {
-      $('body').css('overflow-y', 'scroll')
-      $(this).remove()
-    } else if (!$(this).hasClass('show')) {
+  await $(this).closest('.modal').removeClass('show')
+  setTimeout(() => {
+    if (!$(this).closest('.modal').hasClass('show') && $(this).closest('.modal').hasClass('modal')) {
       $('body').css({'overflow-y': 'scroll'})
-      $(this).attr('style', '')
+      $(this).closest('.modal').attr('style', '')
+      $('.modal-backdrop').last().remove()
     }
-  })
+    $('#errorModal .trigger').removeClass('drawn')
+  }, 150)
 })
 
 $(document).ready(function() {
@@ -79,3 +77,45 @@ $('.carousel-next').click(function(e) {
   item.data('index', index)
   item.children().css({transform: 'translateX('+position+'%)'})
 });
+
+$('#btnLogin').click(function(e) {
+  let username = $('#loginUsername').val()
+  let password = $('#loginPassword').val()
+  if (!username) {
+    dismissModal()
+    return showAlert('Username cannot be empty!')
+  }
+  if (!password) {
+    dismissModal()
+    return showAlert('Password cannot be empty!')
+  }
+  dismissModal()
+})
+
+async function dismissModal() {
+  let modal = await $('.modal.show').removeClass('show')
+  setTimeout(() => {
+    if (!$(modal).hasClass('show') && $(modal).hasClass('modal')) {
+      $('body').css({'overflow-y': 'scroll'})
+      $(modal).attr('style', '')
+      $('.modal-backdrop').last().remove()
+    }
+    $('#errorModal .trigger').removeClass('drawn')
+  }, 150)
+}
+
+async function showAlert(msg) {
+  $('#errorModal #errorModalLabel').text(msg)
+  await $('#errorModal').css({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 0,
+    background: 'rgba(0,0,0,.7)'
+  }).promise()
+  setTimeout(() => {
+    $('#errorModal .trigger').addClass('drawn')
+    $('#errorModal').addClass('show')
+    $('body').append('<div class="modal-backdrop fade"></div>').css('overflow-y', 'hidden').promise()
+  }, 150)
+}

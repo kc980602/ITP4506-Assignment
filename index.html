@@ -409,66 +409,40 @@
         <div class="modal-body">
           <div class="input-group">
             <span class="input-group-addon"><i class="material-icons">person</i></span>
-            <input type="text" class="form-control" placeholder="Username">
+            <input type="text" class="form-control" placeholder="Username" id="loginUsername">
           </div>
           <br />
           <div class="input-group">
             <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-            <input type="text" class="form-control" placeholder="Password">
+            <input type="text" class="form-control" placeholder="Password" id="loginPassword">
           </div>
           <a href="/forget"><small class="float-right">Forgot your password?</small></a>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger modal-dismiss">Cancel</button>
-          <button type="button" class="btn btn-ht">Login</button>
+          <button type="button" class="btn btn-ht" id="btnLogin">Login</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="registerModalLabel">Register</h5>
-        </div>
-        <div class="modal-body">
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">person</i></span>
-            <input type="text" class="form-control" placeholder="Full Name">
-          </div>
-          <br />
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">person</i></span>
-            <input type="text" class="form-control" placeholder="Username">
-          </div>
-          <br />
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-            <input type="password" class="form-control" placeholder="Password">
-          </div>
-          <br />
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-            <input type="password" class="form-control" placeholder="Confirm Password">
-          </div>
-          <br />
-          <div class="input-group">
-            <span class="input-group-addon"><i class="material-icons">email</i></span>
-            <input type="email" class="form-control" placeholder="Email">
-          </div>
-          <br />
-          <div class="input-group">
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">I agree to the <a href="./terms.html" class="text-ht">Terms &amp; Condition</a> and <a href="./privacy.html" class="text-ht">Privacy Policy</a></span>
-            </label>
-          </div>
+          <div class="trigger"></div>
+          <svg version="1.1" id="cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37" width="5em" height="5em" xml:space="preserve">
+            <path class="circ path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;" d="
+            	M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"></path>
+            <polyline class="cross-left path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;"
+            points="10.9,26.4 26.4,10.9"></polyline>
+            <polyline class="cross-right path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;"
+            points="10.9,10.9 26.4,26.4"></polyline>
+          </svg>
+          <p id="errorModalLabel" class="light"></p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger modal-dismiss">Cancel</button>
-          <button type="button" class="btn btn-ht">Register</button>
+          <button type="button" class="btn btn-outline-success modal-dismiss"><i class="material-icons">done</i>OK</button>
         </div>
       </div>
     </div>

@@ -82,15 +82,15 @@ var tours = [
 ];
 
 var serviceItem = {
-                   wifi:'<span class="service"><i class="material-icons">wifi</i>Wifi</span>',
-                   restaurant:'<span class="service"><i class="material-icons">restaurant</i>Restaurant</span>',
-                   parking:'<span class="service"><i class="material-icons">local_parking</i>Parking</span>',
-                   pool:'<span class="service"><i class="material-icons">pool</i>Swimming pool</span>',
-                   shuttle:'<span class="service"><i class="material-icons">airport_shuttle</i>Airport shuttle</span>',
-                   gym:'<span class="service"><i class="material-icons">fitness_center</i>Gym</span>',
-                   bar:'<span class="service"><i class="material-icons">local_bar</i>Bar</span>',
-                   spa:'<span class="service"><i class="material-icons">spa</i>Spa</span>'
-                  };
+  wifi: '<span class="service"><i class="material-icons">wifi</i>Wifi</span>',
+  restaurant: '<span class="service"><i class="material-icons">restaurant</i>Restaurant</span>',
+  parking: '<span class="service"><i class="material-icons">local_parking</i>Parking</span>',
+  pool: '<span class="service"><i class="material-icons">pool</i>Swimming pool</span>',
+  shuttle: '<span class="service"><i class="material-icons">airport_shuttle</i>Airport shuttle</span>',
+  gym: '<span class="service"><i class="material-icons">fitness_center</i>Gym</span>',
+  bar: '<span class="service"><i class="material-icons">local_bar</i>Bar</span>',
+  spa: '<span class="service"><i class="material-icons">spa</i>Spa</span>'
+};
 
 $(document).ready(function(){
   tours.forEach(function(element){
@@ -99,39 +99,36 @@ $(document).ready(function(){
     element.service.forEach(function(i){
       services += serviceItem[i];
     });
-    var hotelItem = `
-              <div id="item" class="card ht_s_item flex-row mb-4 mt-4" onclick="window.location = './hotels_detail.html'">
-                <div class="card-item-image"><img src="./img/hotels/hotel${element.id}.jpg"></div>
-                <div class="card-content">
-                  <div class="row">
-                    <div class="col-8">
-                      <h5><a href="#">${element.name}</a>
-                        <p><span class="star">${stars}</span></p>
-                      </h5>
-                      <p>Shinjuku/Nakano</p>
-                      <div class="ht_item_service">
-                        ${services}
-                      </div>
-                    </div>
-                    <div class="col-4 text-right">
-                      <p class="ht_item_review"><span class="score">${element.rate}</span>/5<span class="review">${element.review}</span></p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 text-right">
-                      <p><span class="price">HK$${element.price.toLocaleString()}</span></p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-8"></div>
-                    <div class="col-4">
-                      <button id="hotelsSearch" type="button" class="btn btn-search btn-lg btn-block">Select</button>
-                    </div>
-                  </div>
-                </div>
-              </div>`;
-
-              $( ".ht_searchContent" ).prepend(hotelItem);
+    $( ".ht_searchContent" ).prepend(`<div id="item" class="card ht_s_item flex-row mb-4 mt-4" onclick="window.location = './hotels_detail.html'">
+      <div class="card-item-image"><img src="./img/hotels/hotel${element.id}.jpg"></div>
+      <div class="card-content">
+        <div class="row">
+          <div class="col-8">
+            <h5><a href="#">${element.name}</a>
+              <p><span class="star">${stars}</span></p>
+            </h5>
+            <p>Shinjuku/Nakano</p>
+            <div class="ht_item_service">
+              ${services}
+            </div>
+          </div>
+          <div class="col-4 text-right">
+            <p class="ht_item_review"><span class="score">${element.rate}</span>/5<span class="review">${element.review}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-right">
+            <p><span class="price">HK$${element.price.toLocaleString()}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8"></div>
+          <div class="col-4">
+            <button id="hotelsSearch" type="button" class="btn btn-search btn-lg btn-block">Select</button>
+          </div>
+        </div>
+      </div>
+    </div>`);
   });
 
 });
