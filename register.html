@@ -91,67 +91,94 @@
             <div class="col-12 mb-3">
               <div class="input-group">
                 <span class="input-group-addon"><i class="material-icons">email</i></span>
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" placeholder="Email" id="email">
               </div>
             </div>
             <div class="col-12 mb-3">
               <div class="input-group">
                 <span class="input-group-addon"><i class="material-icons">person</i></span>
-                <input type="text" class="form-control" placeholder="Username">
+                <input type="text" class="form-control" placeholder="Username" id="username">
               </div>
             </div>
             <div class="col-12 mb-3">
               <div class="input-group">
                 <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Password" id="password">
               </div>
             </div>
             <div class="col-12 mb-3">
               <div class="input-group">
                 <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-                <input type="password" class="form-control" placeholder="Confirm Password">
-              </div>
-            </div>
-            <div class="col-12 mb-3">
-              <div class="input-group">
-                <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">I agree to the <a href="./terms.html" class="text-ht">Terms &amp; Condition</a> and <a href="./privacy.html" class="text-ht">Privacy Policy</a></span>
-                </label>
+                <input type="password" class="form-control" placeholder="Confirm Password" id="password_confirmation">
               </div>
             </div>
           </div>
 
           <div class="row" id="step2">
-            <div class="col-12 mb-3">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="material-icons">email</i></span>
-                <input type="text" class="form-control" placeholder="First Name">
-              </div>
-            </div>
-            <div class="col-12 mb-3">
+            <div class="col-6 mb-3">
               <div class="input-group">
                 <span class="input-group-addon"><i class="material-icons">person</i></span>
-                <input type="text" class="form-control" placeholder="Last Name">
+                <input type="text" class="form-control" placeholder="First Name" id="firstname">
+              </div>
+            </div>
+            <div class="col-6 mb-3">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Last Name" id="lastname">
               </div>
             </div>
             <div class="col-12 mb-3">
               <div class="input-group">
-                <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-                <input type="password" class="form-control" placeholder="Password">
+                <span class="input-group-addon"><i class="material-icons">phone</i></span>
+                <input type="text" class="form-control" placeholder="Mobile Phone" id="phone">
               </div>
             </div>
             <div class="col-12 mb-3">
               <div class="input-group">
-                <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-                <input type="password" class="form-control" placeholder="Confirm Password">
+                <span class="input-group-addon"><i class="material-icons">date_range</i></span>
+                <input type="date" class="form-control" id="date">
               </div>
             </div>
+            <div class="col-6 mb-3">
+              <div class="input-group justify-content-center">
+                <label class="custom-control custom-radio">
+                  <input id="gender" name="radio" type="radio" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Male</span>
+                </label>
+              </div>
+            </div>
+            <div class="col-6 mb-3">
+              <div class="input-group justify-content-center">
+                <label class="custom-control custom-radio">
+                  <input id="gender" name="radio" type="radio" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Female</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center justify-content-center" id="step3">
+            <small>Account Information: </small>
+            <div class="col-12 light">
+              <p id="acInfo">Username: xxxx<br />Email: abc@happy.com</p>
+              <hr />
+            </div>
+            <small>Personal Information: </small>
+            <div class="col-12 light">
+              <p id="personalInfo">Name: xx xxx xxx
+              <br />
+              Mobile Phone: 123456789
+              <br />
+              Birth Date: 02-02-1990
+              <br />
+              Gender: Male</p>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-12 mb-3">
               <div class="input-group">
                 <label class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input">
+                  <input type="checkbox" class="custom-control-input" id="agreeTos">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">I agree to the <a href="./terms.html" class="text-ht">Terms &amp; Condition</a> and <a href="./privacy.html" class="text-ht">Privacy Policy</a></span>
                 </label>
@@ -161,7 +188,7 @@
           <div class="row justify-content-center">
             <div class="col-3 text-center">
               <button id="registerBack" type="button" class="btn btn-outline-danger" disabled>Back</button>
-              <button id="registerNext" type="button" class="btn btn-ht">Next</button>
+              <button id="registerNext" type="button" class="btn btn-ht" disabled>Next</button>
             </div>
           </div>
         </div>
