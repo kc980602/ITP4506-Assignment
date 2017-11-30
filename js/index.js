@@ -113,7 +113,7 @@ async function dismissModal() {
 }
 
 async function showAlert(msg) {
-  $('#errorModal #errorModalLabel').text(msg)
+  $('#errorModal #errorModalLabel').html(msg)
   await $('#errorModal').css({
     display: 'flex',
     alignItems: 'center',

@@ -68,6 +68,11 @@
               <h3>Join HappyTravel</h3>
             </div>
           </div>
+          <div class="row">
+            <div class="col text-center">
+              <div class="alert alert-danger" role="alert" id="error"></div>
+            </div>
+          </div>
           <div class="row" id="step1">
             <div class="col-12 mb-3">
               <div class="input-group">
@@ -122,7 +127,7 @@
             <div class="col-6 mb-3">
               <div class="input-group justify-content-center">
                 <label class="custom-control custom-radio">
-                  <input id="gender" name="radio" type="radio" class="custom-control-input">
+                  <input id="gender" name="radio" type="radio" class="custom-control-input" value="Male">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Male</span>
                 </label>
@@ -131,7 +136,7 @@
             <div class="col-6 mb-3">
               <div class="input-group justify-content-center">
                 <label class="custom-control custom-radio">
-                  <input id="gender" name="radio" type="radio" class="custom-control-input">
+                  <input id="gender" name="radio" type="radio" class="custom-control-input" value="Female">
                   <span class="custom-control-indicator"></span>
                   <span class="custom-control-description">Female</span>
                 </label>
@@ -209,12 +214,10 @@
         <div class="modal-header">
           <div class="trigger"></div>
           <svg version="1.1" id="cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37" width="5em" height="5em" xml:space="preserve">
-            <path class="circ path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;" d="
+            <path class="circ path" style="fill:none;stroke:#28a745;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;" d="
             	M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"></path>
-            <polyline class="cross-left path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;"
-            points="10.9,26.4 26.4,10.9"></polyline>
-            <polyline class="cross-right path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;"
-            points="10.9,10.9 26.4,26.4"></polyline>
+            <polyline class="tick path" style="fill:none;stroke:#28a745;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+  	          11.6,20 15.9,24.2 26.4,13.8 "/>
           </svg>
           <p id="errorModalLabel" class="light"></p>
         </div>

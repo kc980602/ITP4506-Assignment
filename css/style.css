@@ -679,7 +679,7 @@ textarea.ht_input {
   transition: all 1s;
 }
 
-.cross-left {
+.tick {
   stroke-dasharray: 50;
   stroke-dashoffset: 50;
   -webkit-transition: stroke-dashoffset .5s .3s ease-out;
@@ -687,16 +687,6 @@ textarea.ht_input {
   -ms-transition: stroke-dashoffset .5s .3s ease-out;
   -o-transition: stroke-dashoffset .5s .3s ease-out;
   transition: stroke-dashoffset .5s .3s ease-out;
-}
-
-.cross-right {
-  stroke-dasharray: 50;
-  stroke-dashoffset: 50;
-  -webkit-transition: stroke-dashoffset .5s .5s ease-out;
-  -moz-transition: stroke-dashoffset .5s .5s ease-out;
-  -ms-transition: stroke-dashoffset .5s .5s ease-out;
-  -o-transition: stroke-dashoffset .5s .5s ease-out;
-  transition: stroke-dashoffset .5s .5s ease-out;
 }
 
 .drawn+svg .path {
