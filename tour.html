@@ -9,8 +9,8 @@
   <title>Happy Travel | Index</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-  <link href="./css/style.css" rel="stylesheet">
   <link href="./css/search.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 </head>
 
@@ -21,30 +21,11 @@
       <a href="./index.html" class="navbar-brand"><img src="./img/happytravel.png" height="56"></a>
       <div class="navbar-collapse collapse flex-row-reverse">
         <ul class="navbar-nav">
-          <!-- After Login -->
-          <li class="nav-item">
-            <a class="nav-link" hef="./account.html">Account</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cart.html">My Cart</a>
-          </li>
-          <!-- Public -->
           <li class="nav-item">
             <a id="toursTag" class="nav-link" href="index.html#tours">Tours</a>
           </li>
           <li class="nav-item">
             <a id="hotelsTag" class="nav-link" href="index.html#hotels">Hotel</a>
-          </li>
-          <li class="nav-item">
-            <a id="flightsTag" class="nav-link" href="index.html#flights">Flights</a>
-          </li>
-
-          <!-- Before Loing -->
-          <li class="nav-item">
-            <a class="nav-link" href="./register.html">Sign-Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link modal-trigger" href="#" data-toggle="modal" data-target="#loginModal">Sign-In</a>
           </li>
         </ul>
       </div>
@@ -226,23 +207,45 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <h5 class="modal-title" id="loginModalLabel">Sign-In</h5>
         </div>
         <div class="modal-body">
           <div class="input-group">
-            <span class="input-group-addon" id="sizing-addon2"><i class="material-icons">person</i></span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="sizing-addon2">
+            <span class="input-group-addon"><i class="material-icons">person</i></span>
+            <input type="text" class="form-control" placeholder="Username" id="loginUsername">
           </div>
           <br />
           <div class="input-group">
-            <span class="input-group-addon" id="sizing-addon2"><i class="material-icons">vpn_key</i></span>
-            <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="sizing-addon2">
+            <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
+            <input type="text" class="form-control" placeholder="Password" id="loginPassword">
           </div>
           <a href="/forget"><small class="float-right">Forgot your password?</small></a>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary">Register</button>
-          <button type="button" class="btn btn-primary">Login</button>
+          <button type="button" class="btn btn-danger modal-dismiss">Cancel</button>
+          <button type="button" class="btn btn-ht" id="btnLogin">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="trigger"></div>
+          <svg version="1.1" id="cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 37 37" width="5em" height="5em" xml:space="preserve">
+            <path class="circ path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;" d="
+            	M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"></path>
+            <polyline class="cross-left path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;"
+            points="10.9,26.4 26.4,10.9"></polyline>
+            <polyline class="cross-right path" style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:10;"
+            points="10.9,10.9 26.4,26.4"></polyline>
+          </svg>
+          <p id="errorModalLabel" class="light"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success modal-dismiss"><i class="material-icons">done</i>OK</button>
         </div>
       </div>
     </div>
