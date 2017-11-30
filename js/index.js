@@ -22,16 +22,15 @@ $('body').on('click', '.modal.show, .modal-dismiss', async function(e) {
     if (!$(this).closest('.modal').hasClass('show') && $(this).closest('.modal').hasClass('modal')) {
       $('body').css({'overflow-y': 'scroll'})
       $(this).closest('.modal').attr('style', '')
-      $('.modal-backdrop').last().remove()
     }
     $('#errorModal .trigger').removeClass('drawn')
   }, 150)
 })
 
-$('body').on('click', '#toursTag, #hotelsTag, #flightsTag', function(){
+$('body').on('click', '#toursTag, #hotelsTag', function(){
   try {
-    let scrollTo = $(this).attr('href')
-    let position = $(scrollTo).offset().top - 70
+    let scrollTo = $(this).attr('href').split('#')[1]
+    let position = $('#'+scrollTo).offset().top - 70
     $('html, body').animate({scrollTop: position},1000)
   } catch(e) {}
 })
@@ -130,11 +129,11 @@ async function showAlert(msg) {
 }
 
 function showNavItem() {
-  $('.navbar-nav').html('<li class="nav-item"> <a id="toursTag" class="nav-link" href="#tours">Tours</a> </li> <li class="nav-item"> <a id="hotelsTag" class="nav-link" href="#hotels">Hotel</a> </li> <li class="nav-item"> <a id="flightsTag" class="nav-link" href="#flights">Flights</a> </li>')
+  $('.navbar-nav').html('<li class="nav-item"><a id="toursTag" class="nav-link" href="index.html#tours">Tours</a></li><li class="nav-item"><a id="hotelsTag" class="nav-link" href="index.html#hotels">Hotel</a></li>')
   if (localStorage.getItem('auth') > 0) {
     $('.navbar-nav').prepend(`
       <li class="nav-item"><a class="nav-link" hef="./account.html">Account</a></li>
-      <li class="nav-item"> <a class="nav-link" href="./cart.html">My Cart</a></li>
+      <li class="nav-item"><a class="nav-link" href="./cart.html">My Cart</a></li>
     `)
     $('.navbar-nav').append('<li class="nav-item"><a class="nav-link" href="#!" id="signout">Sign-out</a></li>')
   } else {
