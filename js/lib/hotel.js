@@ -99,12 +99,12 @@ $(document).ready(function(){
     element.service.forEach(function(i){
       services += serviceItem[i];
     });
-    $( ".ht_searchContent" ).prepend(`<div id="item" class="card ht_s_item flex-row mb-4 mt-4" onclick="window.location = './hotels_detail.html'">
+    $( ".ht_searchContent" ).prepend(`<div id="item" class="card ht_s_item flex-row mb-4 mt-4">
       <div class="card-item-image"><img src="./img/hotels/hotel${element.id}.jpg"></div>
       <div class="card-content">
         <div class="row">
           <div class="col-8">
-            <h5><a href="#">${element.name}</a>
+            <h5><a href="hotels_detail.html">${element.name}</a>
               <p><span class="star">${stars}</span></p>
             </h5>
             <p>${element.location}</p>
@@ -124,7 +124,7 @@ $(document).ready(function(){
         <div class="row">
           <div class="col-8"></div>
           <div class="col-4">
-            <button id="hotelsSearch" type="button" class="btn btn-search btn-lg btn-block">Select</button>
+            <a id="hotelsSearch" href="hotels_detail.html"><button class="btn btn-search btn-lg btn-block">Select</button></a>
           </div>
         </div>
       </div>

@@ -66,12 +66,12 @@ var tours = [
 
 $(document).ready(function(){
   tours.forEach(function(element){
-    $( ".ht_searchContent" ).prepend(`<div id="item" class="card ht_s_item flex-row mb-4 mt-4" onclick="window.location = './hotels_detail.html'">
+    $( ".ht_searchContent" ).prepend(`<div id="item" class="card ht_s_item flex-row mb-4 mt-4">
       <div class="card-item-image"><img src="./img/${element.img}"></div>
       <div class="card-content">
         <div class="row">
           <div class="col-12">
-            <h5><a href="#">${element.name}</a>
+            <h5><a href="tours_detail.html">${element.name}</a>
             </h5>
             <p>${element.date}</p><br>
             <p>${element.tid}</p>
@@ -87,7 +87,7 @@ $(document).ready(function(){
         <div class="row">
           <div class="col-8"></div>
           <div class="col-4">
-            <button id="hotelsSearch" type="button" class="btn btn-search btn-lg btn-block">Select</button>
+            <a id="hotelsSearch" href="tours_detail.html"><button class="btn btn-search btn-lg btn-block">Select</button></a>
           </div>
         </div>
       </div>
