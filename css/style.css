@@ -155,6 +155,7 @@
 .ht_searchBox {
   background-color: white;
   border-radius: 2px;
+  width: 100%;
 }
 
 .ht_searchBox ul {
@@ -702,4 +703,8 @@ input.form-control.invalid {
   margin-bottom: 1rem;
   border: 0;
   border-top: 1px solid #8fa536;
+}
+
+.card-content a {
+  text-decoration: none;
 }

@@ -163,7 +163,7 @@ fieldset, label {
   width: 100%;
 }
 
-.card-content a {
+.card-content a:not(.btn) {
   color: #557894;
 }
 
