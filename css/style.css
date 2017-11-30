@@ -707,3 +707,9 @@ textarea.ht_input {
 input.form-control.invalid {
   border-color: #a94442;
 }
+
+.divider {
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #8fa536;
+}
