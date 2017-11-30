@@ -22,6 +22,7 @@ $('body').on('click', '.modal.show, .modal-dismiss', async function(e) {
     if (!$(this).closest('.modal').hasClass('show') && $(this).closest('.modal').hasClass('modal')) {
       $('body').css({'overflow-y': 'scroll'})
       $(this).closest('.modal').attr('style', '')
+      $('.modal-backdrop').last().remove()
     }
     $('#errorModal .trigger').removeClass('drawn')
   }, 150)
