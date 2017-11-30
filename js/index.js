@@ -80,15 +80,12 @@ $('.carousel-next').click(function(e) {
 });
 
 $('#btnLogin').click(function() {
-  let username = $('#loginUsername').val()
-  let password = $('#loginPassword').val()
-  if (!username) {
-    dismissModal()
-    return showAlert('Username cannot be empty!')
-  }
-  if (!password) {
-    dismissModal()
-    return showAlert('Password cannot be empty!')
+  let username = $('#loginUsername').val(),
+  password = $('#loginPassword').val()
+  $('#loginError').html('').hide()
+  if (!username || !password) {
+    $('#loginError').append('Invalid username / password.').show()
+    return
   }
   localStorage.setItem('auth', 1)
   showNavItem()

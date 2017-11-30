@@ -1,5 +1,8 @@
 $(document).ready(() => {
   $('#step2, #step3, #error').hide()
+  if (localStorage.getItem('auth') > 0) {
+    window.location = 'index.html'
+  }
 })
 
 $('#email, #username, #password, #password_confirmation').change(() => {
