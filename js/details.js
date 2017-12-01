@@ -31,5 +31,33 @@ $(document).ready(function(){
     alert('ID not exists')
     location = 'index.html'
   }
-
 });
+
+$('#sendReview').click(() => {
+  $('#comment').prepend(`<div class="col-12 mb-3">
+    <div class="divider"></div>
+    <div class="summary">
+      <div class="recommendation ">
+        <div class="user-information">
+          <div class="user cf">
+            <span itemprop="author">A verified user</span>
+          </div>
+        </div>
+        <div class="date-posted">
+          ${new Date().toLocaleString("en-US", {year: 'numeric', month: 'long', day: 'numeric' })}
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <div class="rating-header-container">
+        <div class="review"><span>${$('input[name=rating]:checked').val()}</span> out of 5</div>
+        <h3 class="review-title">${$('#review_title').val()}</h3>
+      </div>
+      <div class="review-text">
+        <span class="translate-text">${$('#review_comment').val()}</span>
+      </div>
+    </div>
+  </div>`)
+})
+
+$()

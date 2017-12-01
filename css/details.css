@@ -23,3 +23,68 @@
   color: #aaa;
   font-size: 14px;
 }
+
+.review span {
+  font-size: 1.35em;
+}
+
+.review .rating-bar {
+  background-color: #c7c7c7;
+  width: 100%;
+  min-width: 12.5em;
+  height: .6em;
+}
+
+.review .rating-bar div {
+  background-color: #ffcb00;
+  height: 100%;
+}
+
+.summary {
+  position: relative;
+  float: left;
+  padding-left: 0;
+  width: 25%;
+}
+
+.recommendation {
+  font-size: 13px;
+  line-height: 18px;
+  padding: .35em 0;
+  margin: 0;
+}
+
+.summary .recommendation .user {
+  color: #616161;
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 0;
+}
+
+.cf::after, .cf::before {
+  content: "";
+  display: table;
+}
+
+.summary .recommendation .date-posted {
+  margin-top: 12px;
+}
+
+.details {
+  position: relative;
+  float: left;
+  padding-left: 1.4em;
+  margin-top: 5px;
+  width: 75%;
+}
+
+.details .rating-header-container {
+  display: table;
+}
+
+.details .rating-header-container .review-title {
+  display: table-cell;
+  overflow: hidden;
+  padding-left: 15px;
+  vertical-align: middle;
+}
