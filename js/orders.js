@@ -133,6 +133,36 @@ $('.orderNext').click(() => {
         alert("Contact Peron's GivenName cannot be empty!")
       }
     }
+  } else if (step === 4) {
+    if ($('#creditcard:checked').length === 1) {
+      if (valid) {
+        if (!$('#payment_card').val()) {
+          valid = false;
+          alert("Card Number cannot be empty!")
+        }
+      }
+      if (valid) {
+        if (!$('#payment_name').val()) {
+          valid = false;
+          alert("Card Holder cannot be empty!")
+        }
+      }
+      if (valid) {
+        if (!$('#payment_exp').val()) {
+          valid = false;
+          alert("Expire date cannot be empty!")
+        }
+      }
+      if (valid) {
+        if (!$('#payment_cvv').val()) {
+          valid = false;
+          alert("CVV cannot be empty!")
+        }
+      }
+    } else if ($('#paypal:checked').length === 0) {
+      valid = false;
+      alert("Please choose an payment method!")
+    }
   }
   if (valid) {
     step++
@@ -344,6 +374,6 @@ $('.saveCart').click(() => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [],
   id = getUrlParams(location.search).id || 1
   cart.push(id)
-  localStorage.setItem('cart', cart)
+  localStorage.setItem('cart', JSON.stringify(cart))
   location = 'cart.html'
 })
