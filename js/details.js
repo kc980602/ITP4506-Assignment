@@ -14,15 +14,21 @@ $(document).ready(function(){
           <div class="col-6">
             <div class="card-item-image" style="min-width: 100%; max-width: 100%;"><img src="./img/${selectedTour.img}"></div>
           </div>
+          <style>
+            .card .card-content p {
+                display: inherit;
+            }
+            .material-icons {
+                color: #557894;
+            }
+          </style>
           <div class="col-6 details">
             <h5><a href="#!">${selectedTour.name} [${selectedTour.tid}]</a></h5>
             <p>${selectedTour.date}</p><br>
-            <p> - I am a string.</p>
-            <p> - I am a string.</p>
-            <p> - I am a string.</p>
-            <p> - I am a string.</p>
-            <p> - I am a string.</p>
-            <p> - I am a string.</p>
+            <p><i class="material-icons">star</i>A tour of North and South Kyushu highlights!</p>
+            <p><i class="material-icons">star</i>Sightseeing Wild dolphins by boat to experience the Japanese natural black sand steaming spa!</p>
+            <p><i class="material-icons">star</i>Kyushu hot springs all over Japan, stay 5 nights Hot Springs Hotel, enjoy Japanese-style hot spring music.</p>
+            <p><i class="material-icons">star</i>Enjoy the famous Yanagawa ~ eel dishes, tempura + Tao Banbian Ding Shi, Japanese kimchi set meals!</p>
             <p><span class="price">HK$${selectedTour.price}</span></p>
             <a href="./tours_order.html?id=${selectedTour.id}" class="btn btn-search btn-lg btn-block" id="auth-btn">Select</a>
           </div>
