@@ -95,3 +95,43 @@ $(document).ready(function(){
   });
 
 });
+
+
+$('input[name=price]').change(function() {
+  let price = $('input[name=price]:checked').val()
+  $( ".ht_searchContent" ).html('')
+  let newTours = tours.filter(item => {
+    return item.price <= price || (price === 7000 && item.price > 6000)
+  })
+  if (newTours.length === 0) {
+    $('.ht_searchContent').prepend('<div id="item" class="card ht_s_item flex-row mb-4 mt-4"><div class="card-content">Tours Not Found. Please update the searching rule.</div></div>')
+  }
+  newTours.map(element => {
+    $( ".ht_searchContent" ).prepend(`<div id="item" class="card ht_s_item flex-row mb-4 mt-4">
+      <div class="card-item-image"><img src="./img/${element.img}"></div>
+      <div class="card-content">
+        <div class="row">
+          <div class="col-12">
+            <h5><a href="tours_detail.html?id=${element.id}">${element.name}</a>
+            </h5>
+            <p>${element.date}</p><br>
+            <p>${element.tid}</p>
+            <div class="ht_item_service">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-right">
+            <p><span class="price">HK$${element.price.toLocaleString()}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8"></div>
+          <div class="col-4">
+            <a id="hotelsSearch" href="tours_detail.html?id=${element.id}"><button class="btn btn-search btn-lg btn-block">Select</button></a>
+          </div>
+        </div>
+      </div>
+    </div>`)
+  })
+})

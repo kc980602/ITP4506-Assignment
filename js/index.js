@@ -130,7 +130,6 @@ function showNavItem() {
   $('.navbar-nav').html('<li class="nav-item"><a id="toursTag" class="nav-link" href="./tour.html">Tours</a></li><li class="nav-item"><a id="hotelsTag" class="nav-link" href="./hotel.html">Hotel</a></li>')
   if (localStorage.getItem('auth') > 0) {
     $('.navbar-nav').prepend(`
-      <li class="nav-item"><a class="nav-link" hef="./account.html">Account</a></li>
       <li class="nav-item"><a class="nav-link" href="./cart.html">My Cart</a></li>
     `)
     $('.navbar-nav').append('<li class="nav-item"><a class="nav-link" href="#!" id="signout">Sign-out</a></li>')

@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,7 +51,7 @@
           <div class="row" style="border-bottom:1px">
             <div class="col-md-6 col-sm-12 mb-3">
               <label for="dest">Going to:</label>
-              <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination"/>
+              <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination" />
               <datalist id="destination">
                 <option value="Tokyo, Japan"></option>
                 <option value="Osaka, Japan"></option>
@@ -78,7 +78,7 @@
             </div>
             <div class="col-sm-4 mb-3">
               <label for="rooms">Rooms:</label>
-              <select  id="h_room" class="custom-select ht_input" name="">
+              <select id="h_room" class="custom-select ht_input" name="">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -91,7 +91,7 @@
             </div>
             <div class="col-sm-4 mb-3">
               <label for="adult">Adult:</label>
-              <select  id="h_adult" class="custom-select ht_input" name="">
+              <select id="h_adult" class="custom-select ht_input" name="">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -104,7 +104,7 @@
             <div class="col-sm-4 mb-3">
               <div class="input-field">
                 <label for="children">Children:</label>
-                <select  id="h_children" class="custom-select ht_input" name="">
+                <select id="h_children" class="custom-select ht_input" name="">
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -135,7 +135,7 @@
           <h5>Search hotel by name</h5>
           <div class="row">
             <div class="col-md-8 mb-3">
-              <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination"/>
+              <input id="h_destination" type="text" class="ht_input" placeholder="Destination" list="destination" />
               <datalist id="destination">
                 <option value="Tokyo, Japan"></option>
                 <option value="Osaka, Japan"></option>
@@ -158,82 +158,83 @@
             <h6>Stars</h6>
             <div style="height: 40px;">
               <fieldset class="rating">
-                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label></label>
-                <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-                <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-                <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-                <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label></label>
+                <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                <input type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+                <input type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                <input type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                <input type="radio" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
               </fieldset>
             </div>
           </div>
           <div class="ht_filterList " id="price">
             <h6>Price</h6>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+            <label class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" value="500" name="price">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Less than HK$500</span>
             </label>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+            <label class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" value="1000" name="price">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">HK$500 to HK$1000</span>
             </label>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+            <label class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" value="1500" name="price">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">HK$1001 to HK$1500</span>
             </label>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+            <label class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" value="2000" name="price">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">HK$1501 to HK$2000</span>
+              <span class="custom-control-description">HK$1500+</span>
             </label>
           </div>
           <div class="ht_filterList " id="price">
             <h6>Amenities</h6>
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" value="wifi" name="facility">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Wifi</span>
             </label>
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" value="restaurant" name="facility">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Restaurant</span>
             </label>
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" value="parking" name="facility">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Parking</span>
             </label>
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" value="shuttle" name="facility">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Airport shuttle</span>
             </label>
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" value="gym" name="facility">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Gym</span>
             </label>
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" value="bar" name="facility">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Bar</span>
             </label>
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+              <input type="checkbox" class="custom-control-input" value="spa" name="facility">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Spa</span>
             </label>
           </div>
         </div>
-        <div class="ht_searchContent col-9">
+        <div class="ht_searchContent col-9"></div>
+        <div class="col-12">
           <nav class="align-items-end flex-row mt-5">
             <ul class="pagination justify-content-center">
               <li class="page-item disabled">
@@ -271,7 +272,6 @@
             <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
             <input type="text" class="form-control" placeholder="Password" id="loginPassword">
           </div>
-          <a href="/forget"><small class="float-right">Forgot your password?</small></a>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger modal-dismiss">Cancel</button>
@@ -308,4 +308,5 @@
   <script src="./js/index.js"></script>
   <script src="./js/lib/hotel.js"></script>
 </body>
+
 </html>

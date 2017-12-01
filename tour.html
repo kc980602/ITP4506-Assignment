@@ -157,32 +157,32 @@
             </div>
           </div>
           <h5>Filter tours by</h5>
-          <div class="ht_filterList " id="price">
+          <div class="ht_filterList" id="price">
             <h6>Price</h6>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+            <label class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" value="4000" name="price">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Less than HK$500</span>
+              <span class="custom-control-description">Less than HK$4000</span>
             </label>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+            <label class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" value="5000" name="price">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">HK$500 to HK$1000</span>
+              <span class="custom-control-description">HK$4001 to HK$5000</span>
             </label>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+            <label class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" value="6000" name="price">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">HK$1001 to HK$1500</span>
+              <span class="custom-control-description">HK$5001 to HK$6000</span>
             </label>
-            <label class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input">
+            <label class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" value="7000" name="price">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">HK$1501 to HK$2000</span>
+              <span class="custom-control-description">HK$6000+</span>
             </label>
           </div>
-
         </div>
-        <div class="ht_searchContent col-9">
+        <div class="ht_searchContent col-9"></div>
+        <div class="col-12">
           <nav class="align-items-end flex-row mt-5">
             <ul class="pagination justify-content-center">
               <li class="page-item disabled">
@@ -220,7 +220,6 @@
             <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
             <input type="text" class="form-control" placeholder="Password" id="loginPassword">
           </div>
-          <a href="/forget"><small class="float-right">Forgot your password?</small></a>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger modal-dismiss">Cancel</button>

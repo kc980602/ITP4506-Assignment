@@ -131,3 +131,66 @@ $(document).ready(function(){
     </div>`);
   });
 });
+
+$('input[name=rating], input[name=facility], input[name=price]').change(function() {
+  let required = $('input[name=rating]:checked').val(),
+  price = $('input[name=price]:checked').val(),
+  facility = []
+  $('input[name=facility]:checked').each((key, item) => {
+    facility.push($(item).val())
+  })
+  $( ".ht_searchContent" ).html('')
+  let newHotel = hotels.filter(item => {
+    return item.star >= required
+  }).filter(item => {
+    return item.price <= price || (price === 2000 && item.price > 1500)
+  }).filter(item => {
+    let valid = true
+    facility.forEach(value => {
+      if (!item.service.includes(value)) {
+        valid = false
+      }
+    })
+    return valid
+  })
+  if (newHotel.length === 0) {
+    $('.ht_searchContent').prepend('<div id="item" class="card ht_s_item flex-row mb-4 mt-4"><div class="card-content">Hotel Not Found. Please update the searching rule.</div></div>')
+  }
+  newHotel.map(item => {
+    var stars = '&#9733;'.repeat(item.star);
+    var services = "";
+    item.service.forEach(function(i){
+      services += serviceItem[i];
+    });
+    $( ".ht_searchContent" ).prepend(`<div id="item" class="card ht_s_item flex-row mb-4 mt-4">
+      <div class="card-item-image"><img src="./img/hotels/hotel${item.id}.jpg"></div>
+      <div class="card-content">
+        <div class="row">
+          <div class="col-8">
+            <h5><a href="hotels_detail.html?id=${item.id}">${item.name}</a>
+              <p><span class="star">${stars}</span></p>
+            </h5>
+            <p>${item.location}</p>
+            <div class="ht_item_service">
+              ${services}
+            </div>
+          </div>
+          <div class="col-4 text-right">
+            <p class="ht_item_review"><span class="score">${item.rate}</span>/5<span class="review">${item.review}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-right">
+            <p><span class="price">HK$${item.price.toLocaleString()}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8"></div>
+          <div class="col-4">
+            <a id="hotelsSearch" href="hotels_detail.html?id=${item.id}"><button class="btn btn-search btn-lg btn-block">Select</button></a>
+          </div>
+        </div>
+      </div>
+    </div>`)
+  })
+})

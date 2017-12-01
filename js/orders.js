@@ -351,7 +351,7 @@ $('.orderNext').click(() => {
       </div>`)
     } else if (step === 5) {
       setTimeout("window.location = 'index.html'", 3000)
-      return showAlert('Tour payment successful.<br/>Auto redirect in 3 seconds.')
+      return showAlert('Payment successful.<br/>Auto redirect in 3 seconds.')
     }
   }
 })
@@ -373,7 +373,7 @@ $('.orderBack').click(() => {
 $('.saveCart').click(() => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [],
   id = getUrlParams(location.search).id || 1
-  cart.push({[id]: $('.price').first().text().split(' ')[1]})
+  cart.push({type: type, id: id, price: $('.price').first().text().split(' ')[1]})
   localStorage.setItem('cart', JSON.stringify(cart))
   location = 'cart.html'
 })
