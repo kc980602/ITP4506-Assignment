@@ -45,7 +45,7 @@
       </div>
       <div class="row mb-5">
         <div class="col-9">
-          <div id="item" class="card ht_s_item flex-row mb-4 mt-4">
+          <div id="item" class="item card ht_s_item flex-row mb-4 mt-4" data-price="6399">
             <div class="card-item-image"><img src="./img/tokyo9.jpg"></div>
             <div class="card-content">
               <div class="row">
@@ -68,12 +68,12 @@
               <div class="row">
                 <div class="col-8"></div>
                 <div class="col-4">
-                  <button type="button" class="btn btn-search btn-lg btn-block">Remove</button>
+                  <button type="button" class="btn btn-search btn-lg btn-block removeBtn">Remove</button>
                 </div>
               </div>
             </div>
           </div>
-          <div id="item" class="card ht_s_item flex-row mb-4 mt-4">
+          <div id="item" class="item card ht_s_item flex-row mb-4 mt-4" data-price="1903">
             <div class="card-item-image"><img src="./img/hotels/hotel8.jpg"></div>
             <div class="card-content">
               <div class="row">
@@ -98,7 +98,7 @@
               <div class="row">
                 <div class="col-8"></div>
                 <div class="col-4">
-                  <button type="button" class="btn btn-search btn-lg btn-block">Remove</button>
+                  <button type="button" class="btn btn-search btn-lg btn-block removeBtn">Remove</button>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@
           </style>
           <div class="ht_cartList">
             <h4>Item</h4>
-            <p>Total:HK$ 8,302</p>
+            <p>Total:HK$ <span id="price">8,302</span></p>
             <button type="button" class="btn btn-search btn-lg btn-block" onclick="location = 'payment.html'">Pay</button>
           </div>
         </div>
@@ -185,5 +185,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/cart.js"></script>
 </body>
 </html>
