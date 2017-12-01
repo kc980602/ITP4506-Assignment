@@ -133,8 +133,8 @@ $(document).ready(function(){
 });
 
 $('input[name=rating], input[name=facility], input[name=price]').change(function() {
-  let required = $('input[name=rating]:checked').val(),
-  price = $('input[name=price]:checked').val(),
+  let required = $('input[name=rating]:checked').val() || 0,
+  price = $('input[name=price]:checked').val() || 2000,
   facility = []
   $('input[name=facility]:checked').each((key, item) => {
     facility.push($(item).val())
