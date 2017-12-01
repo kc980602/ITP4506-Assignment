@@ -98,7 +98,7 @@ $(document).ready(function(){
 
 
 $('input[name=price]').change(function() {
-  let price = $('input[name=price]:checked').val()
+  let price = $('input[name=price]:checked').val() || 7000
   $( ".ht_searchContent" ).html('')
   let newTours = tours.filter(item => {
     return item.price <= price || (price === 7000 && item.price > 6000)
