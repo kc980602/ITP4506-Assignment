@@ -373,7 +373,7 @@ $('.orderBack').click(() => {
 $('.saveCart').click(() => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [],
   id = getUrlParams(location.search).id || 1
-  cart.push(id)
+  cart.push({[id]: $('.price').first().text().split(' ')[1]})
   localStorage.setItem('cart', JSON.stringify(cart))
   location = 'cart.html'
 })
