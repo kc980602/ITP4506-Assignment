@@ -1,4 +1,4 @@
-
+let total = 17, reply = 5
 
 $('#sendReview').click(() => {
   let rate = parseFloat($('input[name=rating]:checked').val())

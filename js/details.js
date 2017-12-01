@@ -1,5 +1,3 @@
-let total = 17, reply = 5
-
 $(document).ready(function(){
   let id = getUrlParams(location.search).id
   if (id) {
