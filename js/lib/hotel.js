@@ -104,7 +104,7 @@ $(document).ready(function(){
       <div class="card-content">
         <div class="row">
           <div class="col-8">
-            <h5><a href="hotels_detail.html">${element.name}</a>
+            <h5><a href="hotels_detail.html?id=${element.id}">${element.name}</a>
               <p><span class="star">${stars}</span></p>
             </h5>
             <p>${element.location}</p>
@@ -124,7 +124,7 @@ $(document).ready(function(){
         <div class="row">
           <div class="col-8"></div>
           <div class="col-4">
-            <a id="hotelsSearch" href="hotels_detail.html"><button class="btn btn-search btn-lg btn-block">Select</button></a>
+            <a id="hotelsSearch" href="hotels_detail.html?id=${element.id}"><button class="btn btn-search btn-lg btn-block">Select</button></a>
           </div>
         </div>
       </div>

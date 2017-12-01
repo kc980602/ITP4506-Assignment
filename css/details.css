@@ -18,3 +18,8 @@
   width: 160px;
   line-height: 36px;
 }
+
+.payment-hint {
+  color: #aaa;
+  font-size: 14px;
+}

@@ -71,7 +71,7 @@ $(document).ready(function(){
       <div class="card-content">
         <div class="row">
           <div class="col-12">
-            <h5><a href="tours_detail.html">${element.name}</a>
+            <h5><a href="tours_detail.html?id=${element.id}">${element.name}</a>
             </h5>
             <p>${element.date}</p><br>
             <p>${element.tid}</p>
@@ -87,7 +87,7 @@ $(document).ready(function(){
         <div class="row">
           <div class="col-8"></div>
           <div class="col-4">
-            <a id="hotelsSearch" href="tours_detail.html"><button class="btn btn-search btn-lg btn-block">Select</button></a>
+            <a id="hotelsSearch" href="tours_detail.html?id=${element.id}"><button class="btn btn-search btn-lg btn-block">Select</button></a>
           </div>
         </div>
       </div>

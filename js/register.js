@@ -31,6 +31,12 @@ $('#registerBack').click(() => {
   verifyForm(step)
 })
 
+$('#agreeTos').click(() => {
+  if ($('#registerBox').data('step') === 3) {
+    $('#registerNext').attr('disabled', $('#agreeTos:checked').length === 0)
+  }
+})
+
 $('#registerNext').click(() => {
   $('#registerNext').attr('disabled', true)
   let step = $('#registerBox').data('step')

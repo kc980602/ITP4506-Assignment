@@ -95,7 +95,7 @@ $('#btnLogin').click(function() {
 
 $('body').on('click', '#signout', function() {
   localStorage.setItem('auth', 0)
-  showNavItem()
+  location = 'index.html'
 })
 
 async function dismissModal() {
@@ -127,14 +127,24 @@ async function showAlert(msg) {
 }
 
 function showNavItem() {
-  $('.navbar-nav').html('<li class="nav-item"><a id="toursTag" class="nav-link" href="index.html#tours">Tours</a></li><li class="nav-item"><a id="hotelsTag" class="nav-link" href="index.html#hotels">Hotel</a></li>')
+  $('.navbar-nav').html('<li class="nav-item"><a id="toursTag" class="nav-link" href="./tour.html">Tours</a></li><li class="nav-item"><a id="hotelsTag" class="nav-link" href="./hotel.html">Hotel</a></li>')
   if (localStorage.getItem('auth') > 0) {
     $('.navbar-nav').prepend(`
       <li class="nav-item"><a class="nav-link" hef="./account.html">Account</a></li>
       <li class="nav-item"><a class="nav-link" href="./cart.html">My Cart</a></li>
     `)
     $('.navbar-nav').append('<li class="nav-item"><a class="nav-link" href="#!" id="signout">Sign-out</a></li>')
+    $('#auth-btn').removeClass('disabled').text('Select')
   } else {
     $('.navbar-nav').append('<li class="nav-item"> <a class="nav-link" href="./register.html">Sign-Up</a> </li> <li class="nav-item"> <a class="nav-link modal-trigger" href="#" data-toggle="modal" data-target="#loginModal">Sign-In</a> </li>')
+    $('#auth-btn').addClass('disabled').text('Please sign-in first')
   }
+}
+
+function getUrlParams(search) {
+  let hashes = search.slice(search.indexOf('?') + 1).split('&')
+  return hashes.reduce((params, hash) => {
+      let [key, val] = hash.split('=')
+      return Object.assign(params, {[key]: decodeURIComponent(val)})
+  }, {})
 }

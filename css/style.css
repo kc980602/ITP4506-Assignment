@@ -13,7 +13,7 @@
 }
 
 .navbar {
-  z-index: 2;
+  z-index: 999;
 }
 
 .navbar-brand {
@@ -707,4 +707,10 @@ input.form-control.invalid {
 
 .card-content a {
   text-decoration: none;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
